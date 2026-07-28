@@ -1,0 +1,48 @@
+.newsletter {
+  padding-top: 80px;
+}
+
+.newsletter-card {
+  display: grid;
+  grid-template-columns: 1fr 0.8fr;
+  align-items: center;
+  gap: 70px;
+  padding: 56px;
+  border: 1px solid rgba(124, 140, 255, 0.18);
+  border-radius: var(--radius-xl);
+  background:
+    radial-gradient(circle at 85% 10%, rgba(124, 140, 255, 0.16), transparent 38%),
+    rgba(255, 255, 255, 0.028);
+}
+
+.newsletter-card h2 {
+  max-width: 650px;
+  font-size: clamp(2rem, 4vw, 3.6rem);
+}
+
+.newsletter-form {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+}
+
+.newsletter-form label {
+  display: block;
+}
+
+.newsletter-form input {
+  width: 100%;
+  min-height: 54px;
+  padding: 0 17px;
+  border: 1px solid var(--line);
+  border-radius: 15px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.035);
+  color: var(--text);
+}
+
+.newsletter-form small {
+  grid-column: 1 / -1;
+  min-height: 18px;
+  color: var(--success);
+}

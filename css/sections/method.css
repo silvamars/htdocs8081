@@ -1,0 +1,50 @@
+.method-grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 90px;
+}
+
+.method-copy {
+  position: sticky;
+  top: 130px;
+  align-self: start;
+}
+
+.method-copy h2 {
+  font-size: clamp(2.2rem, 4.5vw, 4.5rem);
+}
+
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+  color: #c5cbff;
+  font-weight: 700;
+}
+
+.method-list {
+  border-top: 1px solid var(--line);
+}
+
+.method-list article {
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  gap: 22px;
+  padding: 38px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.method-list article > span {
+  color: var(--muted);
+  font-size: 0.76rem;
+}
+
+.method-list h3 {
+  font-size: 1.3rem;
+}
+
+.method-list p {
+  max-width: 540px;
+  margin: 0;
+}

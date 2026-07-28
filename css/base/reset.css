@@ -1,0 +1,154 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  overflow-x: hidden;
+  font-family: "Inter", sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 50% -20%, rgba(124, 140, 255, 0.16), transparent 36%),
+    linear-gradient(180deg, var(--bg-deep), var(--bg) 26%, var(--bg));
+  line-height: 1.6;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  color: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Sora", sans-serif;
+  line-height: 1.12;
+  letter-spacing: -0.035em;
+}
+
+h1 {
+  max-width: 760px;
+  margin-bottom: 26px;
+  font-size: clamp(3rem, 6.4vw, 6.6rem);
+}
+
+h1 span {
+  display: block;
+  color: var(--text-soft);
+}
+
+h2 {
+  margin-bottom: 18px;
+  font-size: clamp(2rem, 4vw, 3.7rem);
+}
+
+h3 {
+  margin-bottom: 12px;
+  font-size: 1.2rem;
+}
+
+p {
+  color: var(--text-soft);
+}
+
+.container {
+  width: min(calc(100% - 40px), var(--container));
+  margin-inline: auto;
+}
+
+.section {
+  position: relative;
+  padding: 116px 0;
+}
+
+.section-soft {
+  border-block: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.018);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 999;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: var(--text);
+  color: var(--bg);
+  transform: translateY(-160%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.site-glow {
+  position: fixed;
+  z-index: -1;
+  width: 520px;
+  height: 520px;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.14;
+  pointer-events: none;
+}
+
+.site-glow--one {
+  top: 120px;
+  right: -260px;
+  background: var(--primary);
+}
+
+.site-glow--two {
+  top: 700px;
+  left: -320px;
+  background: var(--accent);
+}

@@ -1,0 +1,57 @@
+.site-footer {
+  padding: 70px 0 24px;
+  border-top: 1px solid var(--line);
+  background: var(--bg-deep);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.6fr repeat(3, 1fr);
+  gap: 50px;
+}
+
+.footer-grid > div {
+  display: grid;
+  align-content: start;
+  gap: 11px;
+}
+
+.footer-grid > div:first-child {
+  gap: 18px;
+}
+
+.footer-grid p {
+  max-width: 330px;
+  margin: 0;
+  font-size: 0.82rem;
+}
+
+.footer-grid strong {
+  margin-bottom: 8px;
+  font-size: 0.82rem;
+}
+
+.footer-grid a:not(.brand) {
+  color: var(--muted);
+  font-size: 0.78rem;
+  transition: color var(--transition);
+}
+
+.footer-grid a:hover {
+  color: var(--text);
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 54px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.7rem;
+}
