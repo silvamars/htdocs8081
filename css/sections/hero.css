@@ -301,3 +301,19 @@
     transform: translateY(-10px);
   }
 }
+
+/* Escala tipográfica da Landing Page */
+#conteudo .hero h1 {
+  max-width: 720px;
+  margin-bottom: 24px;
+  font-size: clamp(3.2rem, 5.3vw, 5.4rem);
+  line-height: 1.04;
+  letter-spacing: -0.045em;
+}
+
+#conteudo .hero-text {
+  max-width: 620px;
+  margin-bottom: 32px;
+  font-size: clamp(1rem, 1.3vw, 1.16rem);
+  line-height: 1.7;
+}

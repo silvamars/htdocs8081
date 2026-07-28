@@ -1,0 +1,17 @@
+#conteudo .hero h1 {
+  font-size: clamp(3.2rem, 5.3vw, 5.4rem);
+}
+
+#conteudo .hero-text {
+  font-size: clamp(1rem, 1.3vw, 1.16rem);
+}
+
+#conteudo .section-heading h2,
+#conteudo .method-copy h2,
+#conteudo .newsletter-card h2 {
+  font-size: clamp(2rem, 3.5vw, 3.25rem);
+}
+
+#conteudo h3 {
+  font-size: clamp(1.08rem, 1.5vw, 1.28rem);
+}
