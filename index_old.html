@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Descubra, compare e escolha produtos digitais com análises objetivas e recomendações selecionadas pela HubOnSale.">
-  <meta name="theme-color" content="#0b0f19">
+  <meta name="theme-color" content="#090e18">
 
-  <title>HubOnSale | Recomendações e reviews de produtos digitais</title>
+  <title>HubOnSale | Descubra melhores produtos digitais</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,7 +18,6 @@
   <link rel="manifest" href="/site.webmanifest">
 
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/home-v2.css">
 </head>
 
 <body>
@@ -35,11 +34,11 @@
           alt="HubOnSale">
       </a>
 
-      <nav class="main-nav aria-label="Navegação principal"">
+      <nav class="main-nav">
         <a href="#produtos">Produtos</a>
         <a href="#categorias">Categorias</a>
         <a href="#reviews">Reviews</a>
-        <a href="#metodologia">Como avaliamos</a>
+        <a href="#metodo">Como avaliamos</a>
       </nav>
 
       <div class="nav-actions">
@@ -69,18 +68,20 @@
 
           <div class="hero-actions">
             <a class="btn btn-primary" href="#produtos">Explorar produtos</a>
-            <a class="btn btn-secondary" href="#metodo">Conhecer o método</a>
+            <a class="btn btn-secondary" href="#metodo">Como avaliamos</a>
           </div>
 
-          <div class="hero-proof" aria-label="Indicadores de confiança">
+          <div class="hero-proof" aria-label="Diferenciais da plataforma">
             <div>
-              <strong>4,9/5</strong>
-              <span>Avaliação média</span>
+              <strong>Critérios</strong>
+              <span>Avaliação transparente</span>
             </div>
+
             <div>
-              <strong>100%</strong>
-              <span>Análises objetivas</span>
+              <strong>Comparação</strong>
+              <span>Prós, contras e indicação</span>
             </div>
+
             <div>
               <strong>Semanal</strong>
               <span>Conteúdo atualizado</span>
@@ -184,61 +185,187 @@
       </div>
     </section>
 
-    <section class="section editor-picks-section" id="produtos" aria-labelledby="editor-picks-title">
+    <section class="section" id="produtos">
       <div class="container">
-        <div class="section-heading editor-picks-heading">
+        <div class="section-heading">
           <div>
-            <span class="eyebrow">Editor’s Picks</span>
-            <h2 id="editor-picks-title">As recomendações que mais se destacam</h2>
+            <span class="eyebrow">Seleção em destaque</span>
+            <h2>Produtos digitais que merecem atenção</h2>
           </div>
-          <div class="editor-picks-intro">
-            <p>Uma seleção curta, baseada em proposta, qualidade do conteúdo, reputação, suporte e custo-benefício.</p>
-            <a class="inline-link" href="#metodo">Como fazemos esta seleção <span aria-hidden="true">→</span></a>
-          </div>
+          <p>
+            Avaliamos proposta, conteúdo, reputação, suporte e custo-benefício
+            antes de destacar uma recomendação.
+          </p>
         </div>
 
-        <div class="editor-picks-layout">
-          <article class="editor-pick editor-pick--primary">
-            <div class="editor-pick__visual visual-ai" aria-hidden="true">
-              <span class="chip chip-accent">Escolha do editor</span>
-              <span class="editor-pick__symbol">AI</span>
+        <div class="catalog-tools">
+          <label class="search-field">
+            <span class="sr-only">Buscar produto</span>
+            <span class="search-icon" aria-hidden="true"></span>
+            <input id="searchInput" type="search" placeholder="Buscar por nome, categoria ou benefício">
+          </label>
+
+          <select id="categoryFilter" aria-label="Filtrar por categoria">
+            <option value="all">Todas as categorias</option>
+            <option value="ia">Inteligência Artificial</option>
+            <option value="marketing">Marketing</option>
+            <option value="programacao">Programação</option>
+            <option value="design">Design</option>
+            <option value="produtividade">Produtividade</option>
+          </select>
+        </div>
+
+        <div class="product-grid" id="productsGrid">
+          <article class="product-card featured" data-category="ia" data-search="ai productivity pro inteligência artificial automação produtividade">
+            <div class="product-card__visual visual-ai">
+              <span class="chip">Mais recomendado</span>
+              <span class="product-card__symbol">AI</span>
             </div>
-            <div class="editor-pick__content">
-              <div class="editor-pick__meta"><span>Inteligência Artificial</span><span>Atualizado em julho de 2026</span></div>
-              <h3>AI Productivity Pro</h3>
-              <p class="editor-pick__summary">Nossa principal recomendação para profissionais que querem aplicar IA no trabalho, organizar processos e automatizar tarefas repetitivas.</p>
-              <div class="editor-pick__verdict">
-                <div class="editor-pick__score" aria-label="HubOnSale Score 9,8 de 10"><span>HubOnSale Score</span><strong>9,8</strong><small aria-hidden="true">★★★★★</small></div>
-                <div><span class="editor-pick__label">Por que recomendamos</span><ul class="editor-pick__reasons"><li>Conteúdo prático e aplicável</li><li>Modelos e fluxos prontos</li><li>Boa relação entre conteúdo e preço</li></ul></div>
+
+            <div class="product-card__content">
+              <div class="product-card__meta">
+                <span>Inteligência Artificial</span>
+                <span>Atualizado em 2026</span>
               </div>
-              <div class="editor-pick__footer"><p><strong>Melhor para:</strong> produtividade profissional e automações.</p><a class="btn btn-primary" href="#">Ler análise completa</a></div>
+
+              <h3>AI Productivity Pro</h3>
+              <p>Curso prático para aplicar IA em rotina profissional, conteúdo e automações.</p>
+
+              <div class="rating-row">
+                <strong>9,8</strong>
+                <span>★★★★★</span>
+                <small>HubOnSale Score</small>
+              </div>
+
+              <ul class="feature-list">
+                <li>Aulas práticas</li>
+                <li>Modelos prontos</li>
+                <li>Acesso imediato</li>
+              </ul>
+
+              <div class="product-card__actions">
+                <a class="btn btn-primary btn-small" href="#">Ver análise</a>
+                <button class="favorite-btn" type="button" aria-label="Adicionar aos favoritos">♡</button>
+              </div>
             </div>
           </article>
 
-          <div class="editor-picks-secondary">
-            <article class="editor-pick editor-pick--compact">
-              <div class="editor-pick__visual visual-design" aria-hidden="true"><span class="chip chip-muted">Melhor custo-benefício</span><span class="editor-pick__symbol">UX</span></div>
-              <div class="editor-pick__content">
-                <div class="editor-pick__meta"><span>Design</span><span>Certificado</span></div>
-                <h3>Design Essentials</h3><p>Fundamentos de interface, identidade visual e processo criativo para projetos digitais.</p>
-                <div class="editor-pick__compact-footer"><div class="editor-pick__compact-score"><strong>9,4</strong><span>HubOnSale Score</span></div><a class="inline-link" href="#">Ler análise <span aria-hidden="true">→</span></a></div>
+          <article class="product-card" data-category="marketing" data-search="marketing lab tráfego conteúdo vendas estratégia">
+            <div class="product-card__visual visual-marketing">
+              <span class="chip chip-muted">Melhor para iniciantes</span>
+              <span class="product-card__symbol">MK</span>
+            </div>
+
+            <div class="product-card__content">
+              <div class="product-card__meta">
+                <span>Marketing</span>
+                <span>12 módulos</span>
               </div>
-            </article>
-            <article class="editor-pick editor-pick--compact">
-              <div class="editor-pick__visual visual-code" aria-hidden="true"><span class="chip chip-muted">Melhor para iniciantes</span><span class="editor-pick__symbol">&lt;/&gt;</span></div>
-              <div class="editor-pick__content">
-                <div class="editor-pick__meta"><span>Programação</span><span>Do zero ao projeto</span></div>
-                <h3>Dev Start Web</h3><p>Formação introdutória em HTML, CSS e JavaScript com projetos orientados.</p>
-                <div class="editor-pick__compact-footer"><div class="editor-pick__compact-score"><strong>9,5</strong><span>HubOnSale Score</span></div><a class="inline-link" href="#">Ler análise <span aria-hidden="true">→</span></a></div>
+
+              <h3>Marketing Lab</h3>
+              <p>Estratégias para conteúdo, aquisição de clientes e construção de presença digital.</p>
+
+              <div class="rating-row">
+                <strong>9,2</strong>
+                <span>★★★★★</span>
+                <small>HubOnSale Score</small>
               </div>
-            </article>
-          </div>
+
+              <div class="product-card__actions">
+                <a class="btn btn-secondary btn-small" href="#">Ver análise</a>
+                <button class="favorite-btn" type="button" aria-label="Adicionar aos favoritos">♡</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="programacao" data-search="dev start programação web html css javascript">
+            <div class="product-card__visual visual-code">
+              <span class="chip chip-muted">Trilha completa</span>
+              <span class="product-card__symbol">&lt;/&gt;</span>
+            </div>
+
+            <div class="product-card__content">
+              <div class="product-card__meta">
+                <span>Programação</span>
+                <span>Do zero ao projeto</span>
+              </div>
+
+              <h3>Dev Start Web</h3>
+              <p>Formação introdutória em HTML, CSS e JavaScript com projetos orientados.</p>
+
+              <div class="rating-row">
+                <strong>9,5</strong>
+                <span>★★★★★</span>
+                <small>HubOnSale Score</small>
+              </div>
+
+              <div class="product-card__actions">
+                <a class="btn btn-secondary btn-small" href="#">Ver análise</a>
+                <button class="favorite-btn" type="button" aria-label="Adicionar aos favoritos">♡</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="design" data-search="design essentials ui ux identidade visual criatividade">
+            <div class="product-card__visual visual-design">
+              <span class="chip chip-muted">Custo-benefício</span>
+              <span class="product-card__symbol">UX</span>
+            </div>
+
+            <div class="product-card__content">
+              <div class="product-card__meta">
+                <span>Design</span>
+                <span>Certificado</span>
+              </div>
+
+              <h3>Design Essentials</h3>
+              <p>Fundamentos visuais, interfaces e processo criativo para projetos digitais.</p>
+
+              <div class="rating-row">
+                <strong>9,4</strong>
+                <span>★★★★★</span>
+                <small>HubOnSale Score</small>
+              </div>
+
+              <div class="product-card__actions">
+                <a class="btn btn-secondary btn-small" href="#">Ver análise</a>
+                <button class="favorite-btn" type="button" aria-label="Adicionar aos favoritos">♡</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="produtividade" data-search="focus system produtividade organização rotina foco">
+            <div class="product-card__visual visual-focus">
+              <span class="chip chip-muted">Mais produtivo</span>
+              <span class="product-card__symbol">FX</span>
+            </div>
+
+            <div class="product-card__content">
+              <div class="product-card__meta">
+                <span>Produtividade</span>
+                <span>Método prático</span>
+              </div>
+
+              <h3>Focus System</h3>
+              <p>Organização pessoal, priorização e execução para uma rotina menos sobrecarregada.</p>
+
+              <div class="rating-row">
+                <strong>9,1</strong>
+                <span>★★★★★</span>
+                <small>HubOnSale Score</small>
+              </div>
+
+              <div class="product-card__actions">
+                <a class="btn btn-secondary btn-small" href="#">Ver análise</a>
+                <button class="favorite-btn" type="button" aria-label="Adicionar aos favoritos">♡</button>
+              </div>
+            </div>
+          </article>
         </div>
 
-        <div class="editor-picks-more">
-          <div><span class="eyebrow">Mais recomendações</span><p>Explore reviews, comparativos e guias organizados por categoria.</p></div>
-          <a class="btn btn-secondary" href="#reviews">Explorar todos os reviews</a>
-        </div>
+        <p class="no-results" id="noResults" hidden>
+          Nenhum produto corresponde à busca ou categoria selecionada.
+        </p>
       </div>
     </section>
 
@@ -354,7 +481,7 @@
       </div>
     </section>
 
-    <section class="newsletter section">
+    <section class="newsletter section" id="newsletter">
       <div class="container newsletter-card">
         <div>
           <span class="eyebrow">Seleção semanal</span>
@@ -441,15 +568,6 @@
         <button type="button" data-query="Design">Design</button>
       </div>
     </div>
-  </div>
-
-
-  <!-- Compatibilidade temporária com o filtro da Home original.
-       Pode ser removida quando main.js validar a existência dos elementos. -->
-  <div hidden aria-hidden="true">
-    <input id="searchInput" type="search" tabindex="-1">
-    <select id="categoryFilter" tabindex="-1"><option value="all">Todas</option></select>
-    <p id="noResults"></p>
   </div>
 
   <script type="module" src="js/main.js"></script>
