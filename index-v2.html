@@ -18,7 +18,7 @@
   <link rel="manifest" href="/site.webmanifest">
 
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/home-v1.css">
+  <link rel="stylesheet" href="css/home-v2.css">
 </head>
 
 <body>
@@ -242,258 +242,146 @@
       </div>
     </section>
 
-    <section class="section interest-section" id="categorias">
+    <!-- Seção Explore por Categorias (Dark Theme) -->
+<section class="categories-section" id="categorias">
   <div class="container">
-
-    <div class="interest-heading">
-      <span class="eyebrow">Explore por interesse</span>
+    
+    <!-- Cabeçalho da Seção -->
+    <div class="section-header-dark">
+      <span class="sub-tag">EXPLORE POR INTERESSE</span>
       <h2>Encontre a categoria certa</h2>
-      <p>
-        Navegue pelas principais áreas e descubra produtos digitais
-        selecionados para diferentes objetivos.
-      </p>
+      <p>Navegue pelas principais áreas e descubra os melhores produtos digitais para impulsionar seus resultados.</p>
     </div>
 
-    <div class="interest-grid">
+    <!-- Grid de Categorias (8 Cards) -->
+    <div class="categories-grid">
 
-      <a class="interest-card" href="#" aria-label="Explorar Inteligência Artificial">
-        <div class="interest-card__visual">
-          <img
-            src="img/home/ia-automa.jpg"
-            alt=""
-            width="600"
-            height="360"
-            loading="lazy">
+      <!-- Card 1: Inteligência Artificial -->
+      <article class="category-card" data-category="ia">
+        <div class="card-thumb">
+          <img src="https://picsum.photos/id/0/400/250" alt="Inteligência Artificial">
+          <div class="category-icon-badge">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+          </div>
         </div>
-
-        <div class="interest-card__content">
-          <span class="interest-card__icon" aria-hidden="true">
-            <i class="fa-solid fa-robot"></i>
-          </span>
-
+        <div class="category-info">
           <h3>Inteligência Artificial</h3>
-
-          <p>
-            Ferramentas de IA, automação, produtividade e criação de conteúdo.
-          </p>
-
-          <span class="interest-card__link">
-            Explorar categoria
-            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-          </span>
+          <p>Ferramentas de IA, automação, produtividade e criação de conteúdo.</p>
+          <a href="#" class="link-category">Explorar categoria <span>→</span></a>
         </div>
-      </a>
+      </article>
 
-      <a class="interest-card" href="#" aria-label="Explorar Marketing">
-        <div class="interest-card__visual">
-          <img
-            src="img/categories/marketing.webp"
-            alt=""
-            width="600"
-            height="360"
-            loading="lazy">
+      <!-- Card 2: Marketing -->
+      <article class="category-card" data-category="marketing">
+        <div class="card-thumb">
+          <img src="https://picsum.photos/id/1/400/250" alt="Marketing">
+          <div class="category-icon-badge">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M18 11v2h4v-2h-4zm-2 6.61l2.83 2.83 1.41-1.41-2.83-2.83L16 17.61zM16.41 4.97L19.24 2.14l-1.41-1.41-2.83 2.83 1.41 1.41zM11 4C7.14 4 4 7.14 4 11s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7z"/></svg>
+          </div>
         </div>
-
-        <div class="interest-card__content">
-          <span class="interest-card__icon" aria-hidden="true">
-            <i class="fa-solid fa-bullhorn"></i>
-          </span>
-
+        <div class="category-info">
           <h3>Marketing</h3>
-
-          <p>
-            Estratégias, tráfego, automações e ferramentas para ampliar resultados.
-          </p>
-
-          <span class="interest-card__link">
-            Explorar categoria
-            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-          </span>
+          <p>Estratégias, tráfego, automações e ferramentas para crescer seu negócio.</p>
+          <a href="#" class="link-category">Explorar categoria <span>→</span></a>
         </div>
-      </a>
+      </article>
 
-      <a class="interest-card" href="#" aria-label="Explorar Programação">
-        <div class="interest-card__visual">
-          <img
-            src="img/categories/programacao.webp"
-            alt=""
-            width="600"
-            height="360"
-            loading="lazy">
+      <!-- Card 3: Programação -->
+      <article class="category-card" data-category="programacao">
+        <div class="card-thumb">
+          <img src="https://picsum.photos/id/60/400/250" alt="Programação">
+          <div class="category-icon-badge">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>
+          </div>
         </div>
-
-        <div class="interest-card__content">
-          <span class="interest-card__icon" aria-hidden="true">
-            <i class="fa-solid fa-code"></i>
-          </span>
-
+        <div class="category-info">
           <h3>Programação</h3>
-
-          <p>
-            Cursos, ferramentas e recursos para desenvolvimento e tecnologia.
-          </p>
-
-          <span class="interest-card__link">
-            Explorar categoria
-            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-          </span>
+          <p>Cursos, ferramentas e recursos para desenvolvedores de todos os níveis.</p>
+          <a href="#" class="link-category">Explorar categoria <span>→</span></a>
         </div>
-      </a>
+      </article>
 
-      <a class="interest-card" href="#" aria-label="Explorar Design">
-        <div class="interest-card__visual">
-          <img
-            src="img/categories/design.webp"
-            alt=""
-            width="600"
-            height="360"
-            loading="lazy">
+      <!-- Card 4: Design -->
+      <article class="category-card" data-category="design">
+        <div class="card-thumb">
+          <img src="https://picsum.photos/id/106/400/250" alt="Design">
+          <div class="category-icon-badge">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.49 2 2 6.49 2 12s4.49 10 10 10c1.38 0 2.5-1.12 2.5-2.5 0-.61-.23-1.21-.64-1.67-.38-.43-.6-.97-.6-1.54 0-1.24 1.01-2.25 2.25-2.25H17c2.76 0 5-2.24 5-5 0-4.96-4.49-9-10-9z"/></svg>
+          </div>
         </div>
-
-        <div class="interest-card__content">
-          <span class="interest-card__icon" aria-hidden="true">
-            <i class="fa-solid fa-pen-ruler"></i>
-          </span>
-
+        <div class="category-info">
           <h3>Design</h3>
-
-          <p>
-            Ferramentas e recursos para interfaces, identidade visual e criação.
-          </p>
-
-          <span class="interest-card__link">
-            Explorar categoria
-            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-          </span>
+          <p>Ferramentas e cursos para criar designs profissionais e interfaces incríveis.</p>
+          <a href="#" class="link-category">Explorar categoria <span>→</span></a>
         </div>
-      </a>
+      </article>
 
-      <a class="interest-card" href="#" aria-label="Explorar Produtividade">
-        <div class="interest-card__visual">
-          <img
-            src="img/categories/produtividade.webp"
-            alt=""
-            width="600"
-            height="360"
-            loading="lazy">
+      <!-- Card 5: Produtividade -->
+      <article class="category-card" data-category="produtividade">
+        <div class="card-thumb">
+          <img src="https://picsum.photos/id/119/400/250" alt="Produtividade">
+          <div class="category-icon-badge">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+          </div>
         </div>
-
-        <div class="interest-card__content">
-          <span class="interest-card__icon" aria-hidden="true">
-            <i class="fa-solid fa-list-check"></i>
-          </span>
-
+        <div class="category-info">
           <h3>Produtividade</h3>
-
-          <p>
-            Organize tarefas, projetos e processos para produzir com mais clareza.
-          </p>
-
-          <span class="interest-card__link">
-            Explorar categoria
-            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-          </span>
+          <p>Organize tarefas, projetos e processos para fazer mais em menos tempo.</p>
+          <a href="#" class="link-category">Explorar categoria <span>→</span></a>
         </div>
-      </a>
+      </article>
 
-      <a class="interest-card" href="#" aria-label="Explorar Finanças">
-        <div class="interest-card__visual">
-          <img
-            src="img/categories/financas.webp"
-            alt=""
-            width="600"
-            height="360"
-            loading="lazy">
+      <!-- Card 6: Finanças -->
+      <article class="category-card" data-category="financas">
+        <div class="card-thumb">
+          <img src="https://picsum.photos/id/180/400/250" alt="Finanças">
+          <div class="category-icon-badge">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>
+          </div>
         </div>
-
-        <div class="interest-card__content">
-          <span class="interest-card__icon" aria-hidden="true">
-            <i class="fa-solid fa-chart-line"></i>
-          </span>
-
+        <div class="category-info">
           <h3>Finanças</h3>
-
-          <p>
-            Educação financeira, investimentos, planilhas e gestão de recursos.
-          </p>
-
-          <span class="interest-card__link">
-            Explorar categoria
-            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-          </span>
+          <p>Educação financeira, investimentos, planilhas e ferramentas para multiplicar.</p>
+          <a href="#" class="link-category">Explorar categoria <span>→</span></a>
         </div>
-      </a>
+      </article>
 
-      <a class="interest-card" href="#" aria-label="Explorar Educação">
-        <div class="interest-card__visual">
-          <img
-            src="img/categories/educacao.webp"
-            alt=""
-            width="600"
-            height="360"
-            loading="lazy">
+      <!-- Card 7: Educação -->
+      <article class="category-card" data-category="educacao">
+        <div class="card-thumb">
+          <img src="https://picsum.photos/id/201/400/250" alt="Educação">
+          <div class="category-icon-badge">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>
+          </div>
         </div>
-
-        <div class="interest-card__content">
-          <span class="interest-card__icon" aria-hidden="true">
-            <i class="fa-solid fa-book-open"></i>
-          </span>
-
+        <div class="category-info">
           <h3>Educação</h3>
-
-          <p>
-            Cursos, plataformas e recursos digitais para aprender e se desenvolver.
-          </p>
-
-          <span class="interest-card__link">
-            Explorar categoria
-            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-          </span>
+          <p>Cursos online, plataformas e recursos para aprender e se desenvolver.</p>
+          <a href="#" class="link-category">Explorar categoria <span>→</span></a>
         </div>
-      </a>
+      </article>
 
-      <a class="interest-card" href="#" aria-label="Explorar E-commerce">
-        <div class="interest-card__visual">
-          <img
-            src="img/categories/ecommerce.webp"
-            alt=""
-            width="600"
-            height="360"
-            loading="lazy">
+      <!-- Card 8: E-commerce -->
+      <article class="category-card" data-category="ecommerce">
+        <div class="card-thumb">
+          <img src="https://picsum.photos/id/250/400/250" alt="E-commerce">
+          <div class="category-icon-badge">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
+          </div>
         </div>
-
-        <div class="interest-card__content">
-          <span class="interest-card__icon" aria-hidden="true">
-            <i class="fa-solid fa-cart-shopping"></i>
-          </span>
-
+        <div class="category-info">
           <h3>E-commerce</h3>
-
-          <p>
-            Plataformas, soluções e estratégias para vender online e escalar.
-          </p>
-
-          <span class="interest-card__link">
-            Explorar categoria
-            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-          </span>
+          <p>Soluções, plataformas e estratégias para vender online e escalar seu negócio.</p>
+          <a href="#" class="link-category">Explorar categoria <span>→</span></a>
         </div>
-      </a>
+      </article>
 
     </div>
 
-    <div class="interest-footer">
-      <span class="interest-footer__icon" aria-hidden="true">
-        <i class="fa-regular fa-compass"></i>
-      </span>
-
-      <p>
-        Ainda não sabe por onde começar?
-        <a href="#produtos">
-          Ver todos os produtos
-          <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-        </a>
-      </p>
+    <!-- Banner Inferior -->
+    <div class="categories-footer-note">
+      <div class="compass-icon">🧭</div>
+      <p>Ainda não sabe por onde começar? <a href="#destaques">Ver todos os produtos <span>→</span></a></p>
     </div>
 
   </div>

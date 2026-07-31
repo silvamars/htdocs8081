@@ -313,3 +313,197 @@
     width: 100%;
   }
 }
+
+/* =========================================================
+   SEÇÃO CATEGORIAS - DARK THEME (MOCKUP STYLE)
+   ========================================================= */
+
+.categories-section {
+  background-color: #070913; /* Fundo escuro profundo */
+  color: #ffffff;
+  padding: 5rem 0;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+/* Header da Seção */
+.section-header-dark {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 3.5rem auto;
+}
+
+.section-header-dark .sub-tag {
+  color: #9333ea; /* Roxo vibrante */
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  display: block;
+  margin-bottom: 0.8rem;
+}
+
+.section-header-dark h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  letter-spacing: -0.5px;
+}
+
+.section-header-dark p {
+  color: #94a3b8;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+/* Grid de Cards */
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.8rem;
+}
+
+/* Responsive para 4 colunas em telas grandes */
+@media (min-width: 1100px) {
+  .categories-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Card Individual */
+.category-card {
+  background: #0f1322;
+  border: 1px solid #1e2640;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-6px);
+  border-color: #6366f1;
+  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.15);
+}
+
+/* Thumbnail do Card */
+.card-thumb {
+  position: relative;
+  width: 100%;
+  height: 170px;
+  background-color: #0b0e1b;
+  overflow: hidden;
+}
+
+.card-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.85;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.category-card:hover .card-thumb img {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* Badge do Ícone */
+.category-icon-badge {
+  position: absolute;
+  bottom: 12px;
+  left: 16px;
+  width: 38px;
+  height: 38px;
+  background-color: rgba(147, 51, 234, 0.25);
+  border: 1px solid rgba(168, 85, 247, 0.4);
+  backdrop-filter: blur(8px);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #c084fc;
+}
+
+/* Conteúdo do Card */
+.category-info {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.category-info h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.6rem;
+}
+
+.category-info p {
+  color: #818cf8;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+  opacity: 0.85;
+}
+
+/* Link de Ação */
+.link-category {
+  color: #c084fc;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: color 0.2s ease;
+}
+
+.link-category span {
+  transition: transform 0.2s ease;
+}
+
+.category-card:hover .link-category {
+  color: #e879f9;
+}
+
+.category-card:hover .link-category span {
+  transform: translateX(4px);
+}
+
+/* Banner do Rodapé da Seção */
+.categories-footer-note {
+  margin-top: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  color: #94a3b8;
+  font-size: 1rem;
+}
+
+.compass-icon {
+  width: 36px;
+  height: 36px;
+  background-color: rgba(147, 51, 234, 0.15);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  border: 1px solid rgba(168, 85, 247, 0.3);
+}
+
+.categories-footer-note a {
+  color: #c084fc;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.categories-footer-note a:hover {
+  color: #e879f9;
+  text-decoration: underline;
+}
