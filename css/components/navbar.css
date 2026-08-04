@@ -132,6 +132,172 @@
   background: var(--text);
 }
 
+/* =========================================================
+   BOTÃO HAMBÚRGUER
+========================================================= */
+
+.menu-toggle {
+  display: none;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.035);
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 18px;
+  height: 2px;
+  margin: 3px auto;
+  border-radius: 999px;
+  background: var(--text);
+  transition:
+    transform var(--transition),
+    opacity var(--transition);
+}
+
+/* =========================================================
+   MENU MOBILE
+========================================================= */
+
+.mobile-menu[hidden] {
+  display: none;
+}
+
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+}
+
+.mobile-menu__backdrop {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  border: 0;
+  background: rgba(3, 7, 14, 0.7);
+  backdrop-filter: blur(10px);
+  cursor: default;
+}
+
+.mobile-menu__panel {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  bottom: 12px;
+  display: flex;
+  width: min(360px, calc(100% - 24px));
+  flex-direction: column;
+  padding: 22px;
+  border: 1px solid var(--line-strong);
+  border-radius: 24px;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.045),
+      rgba(255, 255, 255, 0.015)
+    ),
+    var(--bg-deep);
+  box-shadow: var(--shadow);
+  transform: translateX(110%);
+  transition: transform 240ms ease;
+}
+
+.mobile-menu.is-open .mobile-menu__panel {
+  transform: translateX(0);
+}
+
+.mobile-menu__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid var(--line);
+}
+
+.mobile-menu__header .brand img {
+  width: 146px;
+}
+
+.mobile-menu__close {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 13px;
+  background: rgba(255, 255, 255, 0.035);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.mobile-menu__nav {
+  display: grid;
+  margin-top: 22px;
+}
+
+.mobile-menu__nav a {
+  display: flex;
+  align-items: center;
+  min-height: 56px;
+  border-bottom: 1px solid var(--line);
+  color: var(--text-soft);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.mobile-menu__nav a:hover,
+.mobile-menu__nav a:focus-visible {
+  color: var(--text);
+}
+
+.mobile-menu__cta {
+  width: 100%;
+  margin-top: auto;
+}
+
+body.menu-open {
+  overflow: hidden;
+}
+
+/* =========================================================
+   RESPONSIVO
+========================================================= */
+
+@media (max-width: 900px) {
+  .main-nav {
+    display: none;
+  }
+
+  .nav-actions > .btn {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: grid;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-shell {
+    width: calc(100% - 20px);
+  }
+
+  .mobile-menu__panel {
+    top: 8px;
+    right: 8px;
+    bottom: 8px;
+    width: calc(100% - 16px);
+    padding: 20px;
+    border-radius: 20px;
+  }
+}
+
 
 /* ==========================================================
    RESPONSIVE

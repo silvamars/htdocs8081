@@ -43,13 +43,48 @@
       </nav>
 
       <div class="nav-actions">
-        <button class="search-trigger">Buscar</button>
-        <a class="btn btn-primary btn-small" href="#newsletter">
-          Receber ofertas
+        
+        <a class="btn btn-primary btn-small" href="#produtos">
+          Ver recomendações
         </a>
-      </div>
+
+        <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-controls="mobileMenu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>    
     </div>
   </header>
+
+  <div class="mobile-menu" id="mobileMenu" hidden>
+    <button class="mobile-menu__backdrop" type="button" aria-label="Fechar menu"> </button>
+
+    <aside class="mobile-menu__panel" aria-label="Menu móvel">
+      <div class="mobile-menu__header">
+        <a class="brand" href="index.html" aria-label="HubOnSale">
+          <img
+            src="img/brand/hubonsale-logo-white.svg"
+            alt="HubOnSale">
+        </a>
+
+        <button class="mobile-menu__close" type="button" aria-label="Fechar menu"></button>          
+          <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+      </div>
+
+      <nav class="mobile-menu__nav" aria-label="Navegação móvel">
+        <a href="#produtos">Produtos</a>
+        <a href="#categorias">Categorias</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#metodologia">Como avaliamos</a>
+      </nav>
+
+      <a class="btn btn-primary mobile-menu__cta" href="#produtos">
+        Ver recomendações
+      </a>
+
+    </aside>
+  </div>
 
   <main id="conteudo">
     <section class="hero section">
@@ -717,25 +752,34 @@
   </div>
 </section>
 
-    <section class="newsletter section">
-      <div class="container newsletter-card">
-        <div>
-          <span class="eyebrow">Seleção semanal</span>
-          <h2>Receba recomendações sem excesso de propaganda.</h2>
-          <p>Novas análises, comparativos e oportunidades digitais diretamente no seu e-mail.</p>
-        </div>
+    <section class="section final-cta" aria-labelledby="final-cta-title">
+  <div class="container">
+    <div class="final-cta__box">
+      <div>
+        <span class="eyebrow">Escolha com mais confiança</span>
 
-        <form id="newsletterForm" class="newsletter-form">
-          <label>
-            <span class="sr-only">Seu melhor e-mail</span>
-            <input type="email" placeholder="seuemail@exemplo.com" required>
-          </label>
-          <button class="btn btn-primary" type="submit">Quero receber</button>
-          <small id="newsletterMessage" aria-live="polite"></small>
-        </form>
+        <h2 id="final-cta-title">
+          Encontre uma recomendação para o que você precisa.
+        </h2>
+
+        <p>
+          Explore produtos selecionados, categorias e análises objetivas
+          antes de tomar sua decisão.
+        </p>
       </div>
-    </section>
-  </main>
+
+      <div class="final-cta__actions">
+        <a class="btn btn-primary" href="#produtos">
+          Ver recomendações
+        </a>
+
+        <a class="btn btn-secondary" href="#reviews">
+          Ler últimas reviews
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 
   <footer class="site-footer">
     <div class="container footer-grid">
