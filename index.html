@@ -28,63 +28,82 @@
   <div class="site-glow site-glow--two" aria-hidden="true"></div>
 
   <header class="site-header">
-    <div class="nav-shell">
-      <a class="brand" href="index.html" aria-label="HubOnSale">
-        <img
-          src="img/brand/hubonsale-logo-white.svg"
-          alt="HubOnSale">
-      </a>
+  <div class="nav-shell">
 
-      <nav class="main-nav aria-label="Navegação principal"">
-        <a href="#produtos">Produtos</a>
-        <a href="#categorias">Categorias</a>
-        <a href="review-camera.html">Reviews</a>
-        <a href="#metodologia">Como avaliamos</a>
-      </nav>
+    <a class="brand" href="index.html" aria-label="HubOnSale">
+      <img
+        src="img/brand/hubonsale-logo-white.svg"
+        alt="HubOnSale"
+      >
+    </a>
 
-      <div class="nav-actions">
-        
-        <a class="btn btn-primary btn-small" href="#produtos">
-          Ver recomendações
-        </a>
+    <nav class="main-nav" aria-label="Navegação principal">
+      <a href="#produtos">Produtos</a>
+      <a href="#categorias">Categorias</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#metodologia">Como avaliamos</a>
+    </nav>
 
-        <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-controls="mobileMenu" aria-expanded="false">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>    
-    </div>
-  </header>
-
-  <div class="mobile-menu" id="mobileMenu" hidden>
-    <button class="mobile-menu__backdrop" type="button" aria-label="Fechar menu"> </button>
-
-    <aside class="mobile-menu__panel" aria-label="Menu móvel">
-      <div class="mobile-menu__header">
-        <a class="brand" href="index.html" aria-label="HubOnSale">
-          <img
-            src="img/brand/hubonsale-logo-white.svg"
-            alt="HubOnSale">
-        </a>
-
-        <button class="mobile-menu__close" type="button" aria-label="Fechar menu"></button>          
-          <i class="fa-solid fa-xmark" aria-hidden="true"></i>
-      </div>
-
-      <nav class="mobile-menu__nav" aria-label="Navegação móvel">
-        <a href="#produtos">Produtos</a>
-        <a href="#categorias">Categorias</a>
-        <a href="#reviews">Reviews</a>
-        <a href="#metodologia">Como avaliamos</a>
-      </nav>
-
-      <a class="btn btn-primary mobile-menu__cta" href="#produtos">
+    <div class="nav-actions">
+      <a class="btn btn-primary btn-small" href="#produtos">
         Ver recomendações
       </a>
 
-    </aside>
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Abrir menu"
+        aria-controls="mobileMenu"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
   </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu" hidden>
+  <button
+    class="mobile-menu__backdrop"
+    type="button"
+    aria-label="Fechar menu">
+  </button>
+
+  <aside class="mobile-menu__panel" aria-label="Menu móvel">
+
+    <div class="mobile-menu__header">
+      <a class="brand" href="index.html" aria-label="HubOnSale">
+        <img
+          src="img/brand/hubonsale-logo-white.svg"
+          alt="HubOnSale"
+        >
+      </a>
+
+      <button
+        class="mobile-menu__close"
+        type="button"
+        aria-label="Fechar menu"
+      >
+        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <nav class="mobile-menu__nav" aria-label="Navegação móvel">
+      <a href="#produtos">Produtos</a>
+      <a href="#categorias">Categorias</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#metodologia">Como avaliamos</a>
+    </nav>
+
+    <a class="btn btn-primary mobile-menu__cta" href="#produtos">
+      Ver recomendações
+    </a>
+
+  </aside>
+</div>
 
   <main id="conteudo">
     <section class="hero section">
@@ -848,15 +867,6 @@
         <button type="button" data-query="Design">Design</button>
       </div>
     </div>
-  </div>
-
-
-  <!-- Compatibilidade temporária com o filtro da Home original.
-       Pode ser removida quando main.js validar a existência dos elementos. -->
-  <div hidden aria-hidden="true">
-    <input id="searchInput" type="search" tabindex="-1">
-    <select id="categoryFilter" tabindex="-1"><option value="all">Todas</option></select>
-    <p id="noResults"></p>
   </div>
 
   <script type="module" src="js/main.js"></script>

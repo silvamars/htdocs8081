@@ -8,6 +8,7 @@
   <title>Melhores câmeras Wi‑Fi externas | Review HubOnSale</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@600;700&display=swap" rel="stylesheet">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon.ico" sizes="any">
@@ -39,20 +40,78 @@
       </nav>
 
       <div class="nav-actions">
-        <button class="search-trigger" type="button">Buscar</button>
-        <a class="btn btn-primary btn-small" href="index.html#newsletter">
-          Receber ofertas
+        
+        <a class="btn btn-primary btn-small" href="index.html#produtos">
+          Ver recomendações
         </a>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Abrir menu"
+          aria-controls="mobileMenu"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+          </button>
       </div>
     </div>
   </header>
+
+  <div class="mobile-menu" id="mobileMenu" hidden>
+  <button
+    class="mobile-menu__backdrop"
+    type="button"
+    aria-label="Fechar menu">
+  </button>
+
+  <aside class="mobile-menu__panel" aria-label="Menu móvel">
+
+    <div class="mobile-menu__header">
+      <a class="brand" href="index.html" aria-label="HubOnSale">
+        <img
+          src="img/brand/hubonsale-logo-white.svg"
+          alt="HubOnSale"
+        >
+      </a>
+
+      <button
+        class="mobile-menu__close"
+        type="button"
+        aria-label="Fechar menu"
+      >
+        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <nav class="mobile-menu__nav" aria-label="Navegação móvel">
+      <a href="index.html#produtos">Produtos</a>
+      <a href="index.html#categorias">Categorias</a>
+      <a href="index.html#reviews">Reviews</a>
+      <a href="index.html#metodologia">Como avaliamos</a>
+    </nav>
+
+    <a
+      class="btn btn-primary mobile-menu__cta"
+      href="index.html#produtos">
+        Ver recomendações
+    </a>
+
+  </aside>
+</div>
 
   <main id="conteudo">
     <section class="review-hero section">
       <div class="container review-hero__grid">
         <div class="review-hero__copy">
           <div class="breadcrumb" aria-label="Trilha de navegação">
-            <a href="#">Home</a><span>/</span><a href="#">Casa inteligente</a><span>/</span><span>Câmeras externas</span>
+            <a href="index.html">Home</a>
+            <span aria-hidden="true">/</span>
+            <a href="index.html#categorias">Casa inteligente</a>
+            <span aria-hidden="true">/</span>
+            <span aria-current="page">Câmeras externas</span>
           </div>
 
           <span class="eyebrow">Guia de compra · conteúdo demonstrativo</span>
@@ -244,11 +303,34 @@
 
     <section class="section related-section">
       <div class="container">
-        <div class="section-heading compact"><div><span class="eyebrow">Continue pesquisando</span><h2>Guias relacionados</h2></div></div>
+        <div class="section-heading compact">
+          <div>
+            <span class="eyebrow">Continue pesquisando</span>
+            <h2>Outras reviews que podem ajudar</h2>
+          </div>
+        </div>
+
         <div class="related-grid">
-          <a href="#"><span>Guia</span><h3>Como escolher uma câmera externa</h3><p>Os recursos que realmente influenciam segurança e facilidade de uso.</p><strong>Ler guia →</strong></a>
-          <a href="#"><span>Comparação</span><h3>Câmera com bateria ou com fio?</h3><p>Entenda qual instalação faz mais sentido para cada residência.</p><strong>Ver comparação →</strong></a>
-          <a href="#"><span>Categoria</span><h3>Casa inteligente e segurança</h3><p>Veja outras recomendações para monitoramento e automação residencial.</p><strong>Explorar categoria →</strong></a>
+          <a href="#">
+            <span>Review</span>
+              <h3>CasaLink View 2K vale a pena?</h3>
+                <p>Veja preço, confiabilidade e para quem essa alternativa faz sentido.</p>
+                <strong>Ler review →</strong>
+          </a>
+
+          <a href="#">
+            <span>Review</span>
+              <h3>SafeHome Orbit é uma boa câmera?</h3>
+                <p>Análise da opção para quem busca armazenamento sem mensalidade.</p>
+                <strong>Ler review →</strong>
+          </a>
+
+          <a href="#">
+            <span>Review</span>
+              <h3>FortCam Pro S vale o preço?</h3>
+                <p>Confira se a autonomia e o alcance justificam o investimento.</p>
+                <strong>Ler review →</strong>
+          </a>
         </div>
       </div>
     </section>
@@ -298,5 +380,6 @@
   </footer>
 
   <script src="js/review.js"></script>
+  <script type="module" src="js/main.js"></script>
 </body>
 </html>
