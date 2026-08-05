@@ -171,7 +171,7 @@
 .mobile-menu {
   position: fixed;
   inset: 0;
-  z-index: 999;
+  z-index: 1000;
 }
 
 .mobile-menu__backdrop {
@@ -188,13 +188,19 @@
   position: absolute;
   top: 12px;
   right: 12px;
-  bottom: 12px;
+
   display: flex;
   width: min(360px, calc(100% - 24px));
+  max-height: calc(100dvh - 24px);
   flex-direction: column;
+
   padding: 22px;
+
+  overflow-y: auto;
+
   border: 1px solid var(--line-strong);
   border-radius: 24px;
+
   background:
     linear-gradient(
       180deg,
@@ -202,8 +208,10 @@
       rgba(255, 255, 255, 0.015)
     ),
     var(--bg-deep);
+
   box-shadow: var(--shadow);
-  transform: translateX(110%);
+
+  transform: translateX(calc(100% + 24px));
   transition: transform 240ms ease;
 }
 
@@ -225,14 +233,24 @@
 }
 
 .mobile-menu__close {
+  position: relative;
+  z-index: 2;
+
   display: grid;
   width: 42px;
   height: 42px;
+  flex-shrink: 0;
   place-items: center;
+
+  padding: 0;
+
   border: 1px solid var(--line);
   border-radius: 13px;
-  background: rgba(255, 255, 255, 0.035);
+
+  background: rgba(255, 255, 255, 0.045);
   color: var(--text);
+
+  font-size: 1.1rem;
   cursor: pointer;
 }
 
@@ -245,6 +263,7 @@
   display: flex;
   align-items: center;
   min-height: 56px;
+  padding-inline: 4px;
   border-bottom: 1px solid var(--line);
   color: var(--text-soft);
   font-size: 1rem;
@@ -258,7 +277,7 @@
 
 .mobile-menu__cta {
   width: 100%;
-  margin-top: auto;
+  margin-top: 24px;
 }
 
 body.menu-open {
@@ -270,6 +289,24 @@ body.menu-open {
 ========================================================= */
 
 @media (max-width: 900px) {
+  .nav-shell {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+  }
+
+  .brand {
+    grid-column: 1;
+  }
+
+  .nav-actions {
+    grid-column: 3;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-left: auto;
+  }
+
   .main-nav {
     display: none;
   }
@@ -280,6 +317,7 @@ body.menu-open {
 
   .menu-toggle {
     display: grid;
+    margin-left: auto;
   }
 }
 
