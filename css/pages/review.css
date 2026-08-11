@@ -149,12 +149,49 @@
 
 .trust-strip{
     border-block:1px solid var(--line);
-    background:rgba(255,255,255,.016)
+    background:rgba(255,255,255,.016);
+    border-bottom: 1px solid var(--line);
+}
+
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+  padding: 24px 26px;
+}
+
+.trust-item + .trust-item {
+  border-left: 1px solid var(--line);
+}
+
+.trust-item i {
+  flex: 0 0 auto;
+  font-size: 1.1rem;
+  color: var(--primary);
+}
+
+.trust-item div {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+}
+
+.trust-item strong {
+  color: var(--text);
+  font-size: .9rem;
+  line-height: 1.3;
+}
+
+.trust-item span {
+  color: var(--muted);
+  font-size: .78rem;
+  line-height: 1.45;
 }
 
 .trust-grid{
     display:grid;
-    grid-template-columns:repeat(3,1fr)
+    grid-template-columns:repeat(4, minmax(0,1fr));
 }
 
 .trust-grid div{display:grid;
@@ -823,128 +860,162 @@
     font-size:.8rem
 }
 
-@media(max-width:1050px)
-    {
-        .review-hero__grid,.article-grid{
-            grid-template-columns:1fr;gap: 32px;
-        }
-        .review-summary{
-            max-width:640px
-        }
-        .top-pick{
-            grid-template-columns:1fr
-        }
-        .top-pick__visual{
-            min-height:480px;
-            border-right:0;
-            border-bottom:1px solid var(--line)
-        }
-        .alternative-grid{
-            grid-template-columns:repeat(2,1fr)
-        }
-        .method-grid{
-            grid-template-columns:repeat(3,1fr)
-        }
-        .score-breakdown{
-            position:static
-        }
-        .faq-layout{
-            grid-template-columns:1fr;gap:34px
+@media(max-width:1050px) {
+
+    .trust-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .trust-item + .trust-item {
+        border-left: 0;
+    }
+
+    .trust-item:nth-child(even) {
+        border-left: 1px solid var(--line);
+    }
+
+    .trust-item:nth-child(n + 3) {
+        border-top: 1px solid var(--line);
+    }
+
+    .review-hero__grid,.article-grid{
+        grid-template-columns:1fr;gap: 32px;
+    }
+
+    .review-summary{
+        max-width:640px
+    }
+    .top-pick{
+        grid-template-columns:1fr
+    }
+    
+    .top-pick__visual{
+        min-height:480px;
+        border-right:0;
+        border-bottom:1px solid var(--line)
+    }
+    
+    .alternative-grid{
+        grid-template-columns:repeat(2,1fr)
+    }
+    
+    .method-grid{
+        grid-template-columns:repeat(3,1fr)
+    }
+    
+    .score-breakdown{
+        position:static
+    }
+    
+    .faq-layout{
+        grid-template-columns:1fr;gap:34px
+    }
+}
+
+@media(max-width:760px){
+
+    .container,.container-wide{
+        width:min(100% - 28px,1180px)
+    }
+
+    .section{
+        padding:76px 0
+    }
+
+    .review-hero {
+        padding-top: calc(var(--navbar-height) + 42px);
         }
     }
 
-@media(max-width:760px)
-        {
-        .container,.container-wide{
-            width:min(100% - 28px,1180px)
-        }
+    .review-hero h1{
+        font: size 2.4rem;
+        line-height: 1.1
+    }
 
-        .section{
-            padding:76px 0
-        }
+    .review-deck{
+        font-size:1rem
+    }
+        
+    .review-summary{
+        padding:22px
+    }
 
-        .review-hero {
-            padding-top: calc(var(--navbar-height) + 42px);
-            }
-        }
+    .trust-grid{
+        grid-template-columns:1fr
+    }
 
-        .review-hero h1{
-            font: size 2.4rem;
-            line-height: 1.1
-        }
+    .trust-item {
+        padding: 20px 4px;
+    }
 
-        .review-deck{
-            font-size:1rem
-        }
-        
-        .review-summary{
-            padding:22px
-        }
+    .trust-item:nth-child(even) {
+        border-left: 0;
+    }
 
-        .trust-grid{
-            grid-template-columns:1fr
-        }
+    .trust-item:nth-child(n + 2) {
+        border-top: 1px solid var(--line);
+    }
 
-        .review-score-card{
-            width:100%;
-            max-width:100%;
-        }
+    .review-score-card{
+        width:100%;
+        max-width:100%;
+    }
 
-        .trust-grid div,.trust-grid div:last-child{
-            border-right:0;
-            border-left:0;
-            border-bottom:1px solid var(--line);
-            padding:18px 4px
-        }
+    .trust-grid div,.trust-grid div:last-child{
+        border-right:0;
+        border-left:0;
+        border-bottom:1px solid var(--line);
+        padding:18px 4px
+    }
         
-        .trust-grid div:last-child{
-            border-bottom:0
-        }
+    .trust-grid div:last-child{
+        border-bottom:0
+    }
         
-        .section-heading{
-            display:grid;gap:18px
-        }
+    .section-heading{
+        display:grid;gap:18px
+    }
         
-        .top-pick__visual{
-            min-height:390px
-        }
+    .top-pick__visual{
+        min-height:390px
+    }
         
-        .camera-scene{
-            transform:scale(.82)
-        }
+    .camera-scene{
+        transform:scale(.82)
+    }
         
-        .top-pick__content{
-            padding:26px
-        }
+    .top-pick__content{
+        padding:26px
+    }
         
-        .pros-cons-mini{
-            grid-template-columns:1fr
-        }
+    .pros-cons-mini{
+        grid-template-columns:1fr
+    }
         
-        .top-pick__footer{
-            align-items:stretch;
-            flex-direction:column
-        }
+    .top-pick__footer{
+        align-items:stretch;
+        flex-direction:column
+    }
         
-        .top-pick__footer .btn{
-            width:100%
-        }
+    .top-pick__footer .btn{
+        width:100%
+    }
         
-        .alternative-grid,
-        .method-grid,
+    .alternative-grid,
+    .method-grid,
 
-        .related-grid{
-            grid-template-columns:1fr
-        }
+    .related-grid{
+        grid-template-columns:1fr
+    }
         
-        .alternative-card{
-            min-height:auto
-        }
+    .alternative-card{
+        min-height:auto
+    }
         
-        .verdict-card{
-            grid-template-columns:1fr;
-            padding:28px
-        }
+    .verdict-card{
+        grid-template-columns:1fr;
+        padding:28px
+    }
         
         
 @media(max-width:480px){
