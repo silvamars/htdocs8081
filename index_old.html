@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Descubra, compare e escolha produtos digitais com análises objetivas e recomendações selecionadas pela HubOnSale.">
-  <meta name="theme-color" content="#090e18">
+  <meta name="theme-color" content="#0b0f19">
 
-  <title>HubOnSale | Descubra melhores produtos digitais</title>
+  <title>HubOnSale | Recomendações e reviews de produtos digitais</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,6 +18,7 @@
   <link rel="manifest" href="/site.webmanifest">
 
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/home-v1.css">
 </head>
 
 <body>
@@ -27,28 +28,82 @@
   <div class="site-glow site-glow--two" aria-hidden="true"></div>
 
   <header class="site-header">
-    <div class="nav-shell">
+  <div class="nav-shell">
+
+    <a class="brand" href="index.html" aria-label="HubOnSale">
+      <img
+        src="img/brand/hubonsale-logo-white.svg"
+        alt="HubOnSale"
+      >
+    </a>
+
+    <nav class="main-nav" aria-label="Navegação principal">
+      <a href="#produtos">Produtos</a>
+      <a href="#categorias">Categorias</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#metodologia">Como avaliamos</a>
+    </nav>
+
+    <div class="nav-actions">
+      <a class="btn btn-primary btn-small" href="#produtos">
+        Ver recomendações
+      </a>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Abrir menu"
+        aria-controls="mobileMenu"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu" hidden>
+  <button
+    class="mobile-menu__backdrop"
+    type="button"
+    aria-label="Fechar menu">
+  </button>
+
+  <aside class="mobile-menu__panel" aria-label="Menu móvel">
+
+    <div class="mobile-menu__header">
       <a class="brand" href="index.html" aria-label="HubOnSale">
         <img
           src="img/brand/hubonsale-logo-white.svg"
-          alt="HubOnSale">
+          alt="HubOnSale"
+        >
       </a>
 
-      <nav class="main-nav">
-        <a href="#produtos">Produtos</a>
-        <a href="#categorias">Categorias</a>
-        <a href="#reviews">Reviews</a>
-        <a href="#metodo">Como avaliamos</a>
-      </nav>
-
-      <div class="nav-actions">
-        <button class="search-trigger">Buscar</button>
-        <a class="btn btn-primary btn-small" href="#newsletter">
-          Receber ofertas
-        </a>
-      </div>
+      <button
+        class="mobile-menu__close"
+        type="button"
+        aria-label="Fechar menu"
+      >
+        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+      </button>
     </div>
-  </header>
+
+    <nav class="mobile-menu__nav" aria-label="Navegação móvel">
+      <a href="#produtos">Produtos</a>
+      <a href="#categorias">Categorias</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#metodologia">Como avaliamos</a>
+    </nav>
+
+    <a class="btn btn-primary mobile-menu__cta" href="#produtos">
+      Ver recomendações
+    </a>
+
+  </aside>
+</div>
 
   <main id="conteudo">
     <section class="hero section">
@@ -68,20 +123,18 @@
 
           <div class="hero-actions">
             <a class="btn btn-primary" href="#produtos">Explorar produtos</a>
-            <a class="btn btn-secondary" href="#metodo">Como avaliamos</a>
+            <a class="btn btn-secondary" href="#metodologia">Conhecer o método</a>
           </div>
 
-          <div class="hero-proof" aria-label="Diferenciais da plataforma">
+          <div class="hero-proof" aria-label="Indicadores de confiança">
             <div>
-              <strong>Critérios</strong>
-              <span>Avaliação transparente</span>
+              <strong>4,9/5</strong>
+              <span>Avaliação média</span>
             </div>
-
             <div>
-              <strong>Comparação</strong>
-              <span>Prós, contras e indicação</span>
+              <strong>100%</strong>
+              <span>Análises objetivas</span>
             </div>
-
             <div>
               <strong>Semanal</strong>
               <span>Conteúdo atualizado</span>
@@ -185,321 +238,567 @@
       </div>
     </section>
 
-    <section class="section" id="produtos">
+    <section class="section editor-picks-section" id="produtos" aria-labelledby="editor-picks-title">
       <div class="container">
-        <div class="section-heading">
+        <div class="section-heading editor-picks-heading">
           <div>
-            <span class="eyebrow">Seleção em destaque</span>
-            <h2>Produtos digitais que merecem atenção</h2>
+            <span class="eyebrow">Editor’s Picks</span>
+            <h2 id="editor-picks-title">As recomendações que mais se destacam</h2>
           </div>
+          <div class="editor-picks-intro">
+            <p>Uma seleção curta, baseada em proposta, qualidade do conteúdo, reputação, suporte e custo-benefício.</p>
+            <a class="inline-link" href="#metodologia">Como fazemos esta seleção <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+
+        <div class="editor-picks-layout">
+          <article class="editor-pick editor-pick--primary">
+            <div class="editor-pick__visual visual-ai" aria-hidden="true">
+              <span class="chip chip-accent">Escolha do editor</span>
+              <span class="editor-pick__symbol">AI</span>
+            </div>
+            <div class="editor-pick__content">
+              <div class="editor-pick__meta"><span>Inteligência Artificial</span><span>Atualizado em julho de 2026</span></div>
+              <h3>AI Productivity Pro</h3>
+              <p class="editor-pick__summary">Nossa principal recomendação para profissionais que querem aplicar IA no trabalho, organizar processos e automatizar tarefas repetitivas.</p>
+              <div class="editor-pick__verdict">
+                <div class="editor-pick__score" aria-label="HubOnSale Score 9,8 de 10"><span>HubOnSale Score</span><strong>9,8</strong><small aria-hidden="true">★★★★★</small></div>
+                <div><span class="editor-pick__label">Por que recomendamos</span><ul class="editor-pick__reasons"><li>Conteúdo prático e aplicável</li><li>Modelos e fluxos prontos</li><li>Boa relação entre conteúdo e preço</li></ul></div>
+              </div>
+              <div class="editor-pick__footer"><p><strong>Melhor para:</strong> produtividade profissional e automações.</p><a class="btn btn-primary" href="#">Ler análise completa</a></div>
+            </div>
+          </article>
+
+          <div class="editor-picks-secondary">
+            <article class="editor-pick editor-pick--compact">
+              <div class="editor-pick__visual visual-design" aria-hidden="true"><span class="chip chip-muted">Melhor custo-benefício</span><span class="editor-pick__symbol">UX</span></div>
+              <div class="editor-pick__content">
+                <div class="editor-pick__meta"><span>Design</span><span>Certificado</span></div>
+                <h3>Design Essentials</h3><p>Fundamentos de interface, identidade visual e processo criativo para projetos digitais.</p>
+                <div class="editor-pick__compact-footer"><div class="editor-pick__compact-score"><strong>9,4</strong><span>HubOnSale Score</span></div><a class="inline-link" href="#">Ler análise <span aria-hidden="true">→</span></a></div>
+              </div>
+            </article>
+            <article class="editor-pick editor-pick--compact">
+              <div class="editor-pick__visual visual-code" aria-hidden="true"><span class="chip chip-muted">Melhor para iniciantes</span><span class="editor-pick__symbol">&lt;/&gt;</span></div>
+              <div class="editor-pick__content">
+                <div class="editor-pick__meta"><span>Programação</span><span>Do zero ao projeto</span></div>
+                <h3>Dev Start Web</h3><p>Formação introdutória em HTML, CSS e JavaScript com projetos orientados.</p>
+                <div class="editor-pick__compact-footer"><div class="editor-pick__compact-score"><strong>9,5</strong><span>HubOnSale Score</span></div><a class="inline-link" href="#">Ler análise <span aria-hidden="true">→</span></a></div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="editor-picks-more">
+          <div><span class="eyebrow">Mais recomendações</span><p>Explore reviews, comparativos e guias organizados por categoria.</p></div>
+          <a class="btn btn-secondary" href="#reviews">Explorar todos os reviews</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section interest-section" id="categorias">
+  <div class="container">
+
+    <div class="interest-heading">
+      <span class="eyebrow">Explore por interesse</span>
+      <h2>Encontre a categoria certa</h2>
+      <p>
+        Navegue pelas principais áreas e descubra produtos digitais
+        selecionados para diferentes objetivos.
+      </p>
+    </div>
+
+     <!-- Grid de Categorias (8 Cards) -->
+    <div class="interest-grid">
+
+      <a class="interest-card" href="#" aria-label="Explorar Inteligência Artificial">
+        <div class="interest-card__visual">
+          <img
+            src="img/home/ia-automa.jpg"
+            alt=""
+            width="600"
+            height="360"
+            loading="lazy">
+        </div>
+
+        <div class="interest-card__content">
+          <span class="interest-card__icon" aria-hidden="true">
+            <i class="fa-solid fa-robot"></i>
+          </span>
+
+          <h3>Inteligência Artificial</h3>
+
           <p>
-            Avaliamos proposta, conteúdo, reputação, suporte e custo-benefício
-            antes de destacar uma recomendação.
+            Ferramentas de IA, automação, produtividade e criação de conteúdo.
+          </p>
+
+          <span class="interest-card__link">
+            Explorar categoria
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </span>
+        </div>
+      </a>
+
+      <a class="interest-card" href="#" aria-label="Explorar Marketing">
+        <div class="interest-card__visual">
+          <img
+            src="https://picsum.photos/id/0/400/250"
+            alt=""
+            width="600"
+            height="360"
+            loading="lazy">
+        </div>
+
+        <div class="interest-card__content">
+          <span class="interest-card__icon" aria-hidden="true">
+            <i class="fa-solid fa-bullhorn"></i>
+          </span>
+
+          <h3>Marketing</h3>
+
+          <p>
+            Estratégias, tráfego, automações e ferramentas para ampliar resultados.
+          </p>
+
+          <span class="interest-card__link">
+            Explorar categoria
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </span>
+        </div>
+      </a>
+
+      <a class="interest-card" href="#" aria-label="Explorar Programação">
+        <div class="interest-card__visual">
+          <img
+            src="https://picsum.photos/id/1/400/250"
+            alt=""
+            width="600"
+            height="360"
+            loading="lazy">
+        </div>
+
+        <div class="interest-card__content">
+          <span class="interest-card__icon" aria-hidden="true">
+            <i class="fa-solid fa-code"></i>
+          </span>
+
+          <h3>Programação</h3>
+
+          <p>
+            Cursos, ferramentas e recursos para desenvolvimento e tecnologia.
+          </p>
+
+          <span class="interest-card__link">
+            Explorar categoria
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </span>
+        </div>
+      </a>
+
+      <a class="interest-card" href="#" aria-label="Explorar Design">
+        <div class="interest-card__visual">
+          <img
+            src="https://picsum.photos/id/106/400/250"
+            alt=""
+            width="600"
+            height="360"
+            loading="lazy">
+        </div>
+
+        <div class="interest-card__content">
+          <span class="interest-card__icon" aria-hidden="true">
+            <i class="fa-solid fa-pen-ruler"></i>
+          </span>
+
+          <h3>Design</h3>
+
+          <p>
+            Ferramentas e recursos para interfaces, identidade visual e criação.
+          </p>
+
+          <span class="interest-card__link">
+            Explorar categoria
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </span>
+        </div>
+      </a>
+
+      <a class="interest-card" href="#" aria-label="Explorar Produtividade">
+        <div class="interest-card__visual">
+          <img
+            src="https://picsum.photos/id/119/400/250"
+            alt=""
+            width="600"
+            height="360"
+            loading="lazy">
+        </div>
+
+        <div class="interest-card__content">
+          <span class="interest-card__icon" aria-hidden="true">
+            <i class="fa-solid fa-list-check"></i>
+          </span>
+
+          <h3>Produtividade</h3>
+
+          <p>
+            Organize tarefas, projetos e processos para produzir com mais clareza.
+          </p>
+
+          <span class="interest-card__link">
+            Explorar categoria
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </span>
+        </div>
+      </a>
+
+      <a class="interest-card" href="#" aria-label="Explorar Finanças">
+        <div class="interest-card__visual">
+          <img
+            src="https://picsum.photos/id/180/400/250"
+            alt=""
+            width="600"
+            height="360"
+            loading="lazy">
+        </div>
+
+        <div class="interest-card__content">
+          <span class="interest-card__icon" aria-hidden="true">
+            <i class="fa-solid fa-chart-line"></i>
+          </span>
+
+          <h3>Finanças</h3>
+
+          <p>
+            Educação financeira, investimentos, planilhas e gestão de recursos.
+          </p>
+
+          <span class="interest-card__link">
+            Explorar categoria
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </span>
+        </div>
+      </a>
+
+      <a class="interest-card" href="#" aria-label="Explorar Educação">
+        <div class="interest-card__visual">
+          <img
+            src="https://picsum.photos/id/0/400/250"
+            alt=""
+            width="600"
+            height="360"
+            loading="lazy">
+        </div>
+
+        <div class="interest-card__content">
+          <span class="interest-card__icon" aria-hidden="true">
+            <i class="fa-solid fa-book-open"></i>
+          </span>
+
+          <h3>Educação</h3>
+
+          <p>
+            Cursos, plataformas e recursos digitais para aprender e se desenvolver.
+          </p>
+
+          <span class="interest-card__link">
+            Explorar categoria
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </span>
+        </div>
+      </a>
+
+      <a class="interest-card" href="review-camera.html" aria-label="Explorar E-commerce">
+        <div class="interest-card__visual">
+          <img
+            src="https://picsum.photos/id/250/400/250"
+            alt=""
+            width="600"
+            height="360"
+            loading="lazy">
+        </div>
+
+        <div class="interest-card__content">
+          <span class="interest-card__icon" aria-hidden="true">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </span>
+
+          <h3>E-commerce</h3>
+
+          <p>
+            Plataformas, soluções e estratégias para vender online e escalar.
+          </p>
+
+          <span class="interest-card__link">
+            Explorar categoria
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </span>
+        </div>
+      </a>
+
+    </div>
+
+    <div class="interest-footer">
+      <span class="interest-footer__icon" aria-hidden="true">
+        <i class="fa-regular fa-compass"></i>
+      </span>
+
+      <p>
+        Ainda não sabe por onde começar?
+        <a href="#produtos">
+          Ver todos os produtos
+          <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+        </a>
+      </p>
+    </div>
+
+  </div>
+</section>
+
+    <section class="section" id="metodologia">
+  <div class="container method-grid">
+
+    <div class="method-copy">
+      <span class="eyebrow">Como escolhemos nossas recomendações</span>
+
+      <h2>Toda recomendação segue os mesmos critérios.</h2>
+
+      <p>
+        Antes de recomendar qualquer produto, analisamos qualidade,
+        reputação, experiência de uso e custo-benefício. Assim, você
+        entende por que um produto foi recomendado e qual é a melhor
+        opção para o seu perfil.
+      </p>
+    </div>
+
+    <div class="method-list">
+
+      <article>
+        <span>01</span>
+        <div>
+          <h3>Qualidade do produto</h3>
+          <p>
+            Avaliamos o conteúdo, os recursos oferecidos e para quem
+            a solução realmente é indicada.
           </p>
         </div>
+      </article>
 
-        <div class="catalog-tools">
-          <label class="search-field">
-            <span class="sr-only">Buscar produto</span>
-            <span class="search-icon" aria-hidden="true"></span>
-            <input id="searchInput" type="search" placeholder="Buscar por nome, categoria ou benefício">
-          </label>
+      <article>
+        <span>02</span>
+        <div>
+          <h3>Reputação</h3>
+          <p>
+            Consideramos a credibilidade do fabricante, avaliações,
+            atualizações e a experiência da comunidade.
+          </p>
+        </div>
+      </article>
 
-          <select id="categoryFilter" aria-label="Filtrar por categoria">
-            <option value="all">Todas as categorias</option>
-            <option value="ia">Inteligência Artificial</option>
-            <option value="marketing">Marketing</option>
-            <option value="programacao">Programação</option>
-            <option value="design">Design</option>
-            <option value="produtividade">Produtividade</option>
-          </select>
+      <article>
+        <span>03</span>
+        <div>
+          <h3>Experiência de uso</h3>
+          <p>
+            Observamos facilidade de uso, suporte, organização do
+            conteúdo e processo de compra.
+          </p>
+        </div>
+      </article>
+
+      <article>
+        <span>04</span>
+        <div>
+          <h3>Custo-benefício</h3>
+          <p>
+            Comparamos preço, recursos e alternativas para indicar
+            quando um investimento realmente vale a pena.
+          </p>
+        </div>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+    <section class="section latest-reviews-section" id="reviews">
+      <div class="container">
+
+        <div class="section-heading latest-reviews-heading">
+          <div>
+          <span class="eyebrow">Últimas reviews</span>
+          <h2>Análises recentes para ajudar você a escolher melhor</h2>
         </div>
 
-        <div class="product-grid" id="productsGrid">
-          <article class="product-card featured" data-category="ia" data-search="ai productivity pro inteligência artificial automação produtividade">
-            <div class="product-card__visual visual-ai">
-              <span class="chip">Mais recomendado</span>
-              <span class="product-card__symbol">AI</span>
-            </div>
-
-            <div class="product-card__content">
-              <div class="product-card__meta">
-                <span>Inteligência Artificial</span>
-                <span>Atualizado em 2026</span>
-              </div>
-
-              <h3>AI Productivity Pro</h3>
-              <p>Curso prático para aplicar IA em rotina profissional, conteúdo e automações.</p>
-
-              <div class="rating-row">
-                <strong>9,8</strong>
-                <span>★★★★★</span>
-                <small>HubOnSale Score</small>
-              </div>
-
-              <ul class="feature-list">
-                <li>Aulas práticas</li>
-                <li>Modelos prontos</li>
-                <li>Acesso imediato</li>
-              </ul>
-
-              <div class="product-card__actions">
-                <a class="btn btn-primary btn-small" href="#">Ver análise</a>
-                <button class="favorite-btn" type="button" aria-label="Adicionar aos favoritos">♡</button>
-              </div>
-            </div>
-          </article>
-
-          <article class="product-card" data-category="marketing" data-search="marketing lab tráfego conteúdo vendas estratégia">
-            <div class="product-card__visual visual-marketing">
-              <span class="chip chip-muted">Melhor para iniciantes</span>
-              <span class="product-card__symbol">MK</span>
-            </div>
-
-            <div class="product-card__content">
-              <div class="product-card__meta">
-                <span>Marketing</span>
-                <span>12 módulos</span>
-              </div>
-
-              <h3>Marketing Lab</h3>
-              <p>Estratégias para conteúdo, aquisição de clientes e construção de presença digital.</p>
-
-              <div class="rating-row">
-                <strong>9,2</strong>
-                <span>★★★★★</span>
-                <small>HubOnSale Score</small>
-              </div>
-
-              <div class="product-card__actions">
-                <a class="btn btn-secondary btn-small" href="#">Ver análise</a>
-                <button class="favorite-btn" type="button" aria-label="Adicionar aos favoritos">♡</button>
-              </div>
-            </div>
-          </article>
-
-          <article class="product-card" data-category="programacao" data-search="dev start programação web html css javascript">
-            <div class="product-card__visual visual-code">
-              <span class="chip chip-muted">Trilha completa</span>
-              <span class="product-card__symbol">&lt;/&gt;</span>
-            </div>
-
-            <div class="product-card__content">
-              <div class="product-card__meta">
-                <span>Programação</span>
-                <span>Do zero ao projeto</span>
-              </div>
-
-              <h3>Dev Start Web</h3>
-              <p>Formação introdutória em HTML, CSS e JavaScript com projetos orientados.</p>
-
-              <div class="rating-row">
-                <strong>9,5</strong>
-                <span>★★★★★</span>
-                <small>HubOnSale Score</small>
-              </div>
-
-              <div class="product-card__actions">
-                <a class="btn btn-secondary btn-small" href="#">Ver análise</a>
-                <button class="favorite-btn" type="button" aria-label="Adicionar aos favoritos">♡</button>
-              </div>
-            </div>
-          </article>
-
-          <article class="product-card" data-category="design" data-search="design essentials ui ux identidade visual criatividade">
-            <div class="product-card__visual visual-design">
-              <span class="chip chip-muted">Custo-benefício</span>
-              <span class="product-card__symbol">UX</span>
-            </div>
-
-            <div class="product-card__content">
-              <div class="product-card__meta">
-                <span>Design</span>
-                <span>Certificado</span>
-              </div>
-
-              <h3>Design Essentials</h3>
-              <p>Fundamentos visuais, interfaces e processo criativo para projetos digitais.</p>
-
-              <div class="rating-row">
-                <strong>9,4</strong>
-                <span>★★★★★</span>
-                <small>HubOnSale Score</small>
-              </div>
-
-              <div class="product-card__actions">
-                <a class="btn btn-secondary btn-small" href="#">Ver análise</a>
-                <button class="favorite-btn" type="button" aria-label="Adicionar aos favoritos">♡</button>
-              </div>
-            </div>
-          </article>
-
-          <article class="product-card" data-category="produtividade" data-search="focus system produtividade organização rotina foco">
-            <div class="product-card__visual visual-focus">
-              <span class="chip chip-muted">Mais produtivo</span>
-              <span class="product-card__symbol">FX</span>
-            </div>
-
-            <div class="product-card__content">
-              <div class="product-card__meta">
-                <span>Produtividade</span>
-                <span>Método prático</span>
-              </div>
-
-              <h3>Focus System</h3>
-              <p>Organização pessoal, priorização e execução para uma rotina menos sobrecarregada.</p>
-
-              <div class="rating-row">
-                <strong>9,1</strong>
-                <span>★★★★★</span>
-                <small>HubOnSale Score</small>
-              </div>
-
-              <div class="product-card__actions">
-                <a class="btn btn-secondary btn-small" href="#">Ver análise</a>
-                <button class="favorite-btn" type="button" aria-label="Adicionar aos favoritos">♡</button>
-              </div>
-            </div>
-          </article>
-        </div>
-
-        <p class="no-results" id="noResults" hidden>
-          Nenhum produto corresponde à busca ou categoria selecionada.
+        <p>
+          Reviews objetivas sobre preço, reputação, confiabilidade,
+          benefícios e alternativas disponíveis.
         </p>
       </div>
-    </section>
 
-    <section class="section section-soft" id="categorias">
-      <div class="container">
-        <div class="section-heading compact">
-          <div>
-            <span class="eyebrow">Explore por interesse</span>
-            <h2>Encontre a categoria certa</h2>
+      <div class="latest-reviews-grid">
+
+        <article class="latest-review-card">
+          <a class="latest-review-card__image" href="review-chatgpt-plus.html" aria-label="Ler review do ChatGPT Plus">
+           <img src="https://images.unsplash.com/photo-1496171367470-9ed9a91ea931" alt="Notebook exibindo uma ferramenta de inteligência artificial" width="600" height="360" loading="lazy">
+          </a>
+
+          <div class="latest-review-card__content">
+            <div class="latest-review-card__meta">
+              <span>Inteligência Artificial</span>
+              <time datetime="2026-08-04">Atualizado em agosto de 2026</time>
+            </div>
+
+            <h3>
+              <a href="review-chatgpt-plus.html">
+              ChatGPT Plus vale a pena?
+              </a>
+            </h3>
+
+            <p>
+              Analisamos preço, recursos, limitações e para quais perfis
+              a assinatura realmente faz sentido.
+            </p>
+
+            <div class="latest-review-card__footer">
+              <span class="latest-review-card__score">
+                <strong>9,6</strong>
+                HubOnSale Score
+              </span>
+
+              <a class="inline-link" href="review-chatgpt-plus.html">
+                Ler review
+                <span aria-hidden="true">→</span>
+              </a>
+            </div>
           </div>
-        </div>
+        </article>
 
-        <div class="category-grid">
-          <button class="category-card" type="button" data-filter="ia">
-            <span>01</span>
-            <strong>Inteligência Artificial</strong>
-            <small>Ferramentas, automação e produtividade.</small>
-          </button>
+        <article class="latest-review-card">
+          <a
+          class="latest-review-card__image"
+          href="review-hostinger.html"
+          aria-label="Ler review da Hostinger"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1518770660439-4636190af475"
+            alt="Notebook exibindo um painel de hospedagem de sites"
+            width="600"
+            height="360"
+            loading="lazy"
+          >
+        </a>
 
-          <button class="category-card" type="button" data-filter="marketing">
-            <span>02</span>
-            <strong>Marketing</strong>
-            <small>Conteúdo, tráfego, estratégia e vendas.</small>
-          </button>
+        <div class="latest-review-card__content">
+          <div class="latest-review-card__meta">
+            <span>Hospedagem</span>
+            <time datetime="2026-08-01">Atualizado em agosto de 2026</time>
+          </div>
 
-          <button class="category-card" type="button" data-filter="programacao">
-            <span>03</span>
-            <strong>Programação</strong>
-            <small>Formações técnicas e desenvolvimento web.</small>
-          </button>
+          <h3>
+            <a href="review-hostinger.html">
+              Hostinger vale a pena para começar um site?
+            </a>
+          </h3>
 
-          <button class="category-card" type="button" data-filter="design">
-            <span>04</span>
-            <strong>Design</strong>
-            <small>UI, UX, criação visual e ferramentas.</small>
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="metodo">
-      <div class="container method-grid">
-        <div class="method-copy">
-          <span class="eyebrow">Como avaliamos</span>
-          <h2>Uma recomendação precisa justificar sua posição.</h2>
           <p>
-            O HubOnSale prioriza clareza. Cada produto recebe uma análise baseada
-            em critérios visíveis, evitando recomendações genéricas ou promessas exageradas.
+            Veja os pontos fortes, limitações, preço e confiabilidade
+            antes de contratar um plano.
           </p>
-          <a class="text-link" href="#">Conhecer todos os critérios <span>→</span></a>
-        </div>
 
-        <div class="method-list">
-          <article>
-            <span>01</span>
-            <div>
-              <h3>Proposta e conteúdo</h3>
-              <p>Avaliamos o que o produto promete, entrega e para quem realmente serve.</p>
-            </div>
-          </article>
+          <div class="latest-review-card__footer">
+            <span class="latest-review-card__score">
+              <strong>9,3</strong>
+              HubOnSale Score
+            </span>
 
-          <article>
-            <span>02</span>
-            <div>
-              <h3>Experiência e suporte</h3>
-              <p>Observamos acesso, organização, materiais, garantia e atendimento.</p>
-            </div>
-          </article>
-
-          <article>
-            <span>03</span>
-            <div>
-              <h3>Custo-benefício</h3>
-              <p>Comparamos preço, profundidade e alternativas disponíveis.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-soft" id="reviews">
-      <div class="container">
-        <div class="section-heading">
-          <div>
-            <span class="eyebrow">Conteúdo editorial</span>
-            <h2>Reviews e comparativos recentes</h2>
+            <a class="inline-link" href="review-hostinger.html">
+              Ler review
+              <span aria-hidden="true">→</span>
+            </a>
           </div>
-          <a class="text-link" href="#">Ver todos <span>→</span></a>
         </div>
+      </article>
 
-        <div class="review-grid">
-          <article class="review-card">
-            <span class="review-card__tag">Comparativo</span>
-            <h3>Curso de IA ou ferramenta com assinatura: qual faz mais sentido?</h3>
-            <p>Entenda quando vale investir em conhecimento e quando uma solução pronta é suficiente.</p>
-            <a href="#">Ler comparativo <span>→</span></a>
-          </article>
+      <article class="latest-review-card">
+        <a
+          class="latest-review-card__image"
+          href="review-nordvpn.html"
+          aria-label="Ler review da NordVPN"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3"
+            alt="Notebook representando segurança e proteção online"
+            width="600"
+            height="360"
+            loading="lazy"
+          >
+        </a>
 
-          <article class="review-card">
-            <span class="review-card__tag">Guia</span>
-            <h3>Como avaliar um curso online antes de comprar</h3>
-            <p>Critérios práticos para analisar conteúdo, suporte, garantia e reputação.</p>
-            <a href="#">Ler guia <span>→</span></a>
-          </article>
+        <div class="latest-review-card__content">
+          <div class="latest-review-card__meta">
+            <span>Segurança digital</span>
+            <time datetime="2026-07-28">Atualizado em julho de 2026</time>
+          </div>
 
-          <article class="review-card">
-            <span class="review-card__tag">Seleção</span>
-            <h3>Ferramentas digitais para organizar projetos e rotina</h3>
-            <p>Uma seleção objetiva para profissionais, criadores e pequenos negócios.</p>
-            <a href="#">Ver seleção <span>→</span></a>
-          </article>
+          <h3>
+            <a href="review-nordvpn.html">
+              NordVPN é confiável e vale o preço?
+            </a>
+          </h3>
+
+          <p>
+            Avaliamos segurança, reputação, facilidade de uso,
+            planos disponíveis e principais alternativas.
+          </p>
+
+          <div class="latest-review-card__footer">
+            <span class="latest-review-card__score">
+              <strong>9,1</strong>
+              HubOnSale Score
+            </span>
+
+            <a class="inline-link" href="review-nordvpn.html">
+              Ler review
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
         </div>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+    <section class="section final-cta" aria-labelledby="final-cta-title">
+  <div class="container">
+    <div class="final-cta__box">
+      <div>
+        <span class="eyebrow">Escolha com mais confiança</span>
+
+        <h2 id="final-cta-title">
+          Encontre uma recomendação para o que você precisa.
+        </h2>
+
+        <p>
+          Explore produtos selecionados, categorias e análises objetivas
+          antes de tomar sua decisão.
+        </p>
       </div>
-    </section>
 
-    <section class="newsletter section" id="newsletter">
-      <div class="container newsletter-card">
-        <div>
-          <span class="eyebrow">Seleção semanal</span>
-          <h2>Receba recomendações sem excesso de propaganda.</h2>
-          <p>Novas análises, comparativos e oportunidades digitais diretamente no seu e-mail.</p>
-        </div>
+      <div class="final-cta__actions">
+        <a class="btn btn-primary" href="#produtos">
+          Ver recomendações
+        </a>
 
-        <form id="newsletterForm" class="newsletter-form">
-          <label>
-            <span class="sr-only">Seu melhor e-mail</span>
-            <input type="email" placeholder="seuemail@exemplo.com" required>
-          </label>
-          <button class="btn btn-primary" type="submit">Quero receber</button>
-          <small id="newsletterMessage" aria-live="polite"></small>
-        </form>
+        <a class="btn btn-secondary" href="#reviews">
+          Ler últimas reviews
+        </a>
       </div>
-    </section>
-  </main>
+    </div>
+  </div>
+</section>
 
   <footer class="site-footer">
     <div class="container footer-grid">
@@ -523,16 +822,16 @@
 
       <div>
         <strong>Recursos</strong>
-        <a href="#metodo">Como avaliamos</a>
+        <a href="#metodologia">Como avaliamos</a>
         <a href="#">Comparativos</a>
         <a href="#">Guias</a>
       </div>
 
       <div>
         <strong>Legal</strong>
-        <a href="#">Política de privacidade</a>
-        <a href="#">Termos de uso</a>
-        <a href="#">Transparência de afiliados</a>
+        <a href="politica-de-privacidade.html">Política de privacidade</a>
+        <a href="termos-de-uso.html">Termos de uso</a>
+        <a href="transparencia-afiliados.html">Transparência de afiliados</a>
       </div>
     </div>
 
@@ -544,32 +843,7 @@
     </div>
   </footer>
 
-  <div class="search-modal" id="searchModal" hidden>
-    <button class="search-modal__backdrop" type="button" aria-label="Fechar busca"></button>
-    <div class="search-modal__panel" role="dialog" aria-modal="true" aria-labelledby="searchModalTitle">
-      <div class="search-modal__header">
-        <div>
-          <span class="eyebrow">Busca rápida</span>
-          <h2 id="searchModalTitle">Encontre produtos e categorias</h2>
-        </div>
-        <button class="modal-close" type="button" aria-label="Fechar">×</button>
-      </div>
-
-      <label class="search-field modal-search">
-        <span class="search-icon" aria-hidden="true"></span>
-        <input id="modalSearchInput" type="search" placeholder="Digite para buscar...">
-      </label>
-
-      <div class="search-suggestions">
-        <span>Pesquisas sugeridas</span>
-        <button type="button" data-query="Inteligência Artificial">Inteligência Artificial</button>
-        <button type="button" data-query="Marketing">Marketing</button>
-        <button type="button" data-query="Programação">Programação</button>
-        <button type="button" data-query="Design">Design</button>
-      </div>
-    </div>
-  </div>
-
   <script type="module" src="js/main.js"></script>
+
 </body>
 </html>

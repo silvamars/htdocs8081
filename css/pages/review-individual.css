@@ -1,0 +1,254 @@
+/* =========================================================
+   HUBONSALE — REVIEW INDIVIDUAL
+   Complementa css/pages/review.css
+========================================================= */
+
+.product-overview .pick-rank {
+  color: var(--text);
+  font-size: 1.35rem;
+}
+
+.product-specs-mini {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 28px 0 30px;
+}
+
+.product-specs-mini > div {
+  display: grid;
+  gap: 5px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: rgba(255,255,255,.02);
+}
+
+.product-specs-mini span {
+  color: var(--muted);
+  font-size: .72rem;
+}
+
+.product-specs-mini strong {
+  font-size: .9rem;
+}
+
+/* PRÓS E CONTRAS */
+
+.pros-cons-detail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.pros-cons-detail article {
+  padding: 30px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: rgba(255,255,255,.018);
+}
+
+.pros-cons-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-weight: 800;
+}
+
+.pros-card .pros-cons-label i {
+  color: var(--success);
+}
+
+.cons-card .pros-cons-label i {
+  color: var(--warning);
+}
+
+.pros-cons-detail ul {
+  display: grid;
+  gap: 12px;
+  margin: 24px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pros-cons-detail li {
+  position: relative;
+  padding-left: 24px;
+  color: var(--text-soft);
+  line-height: 1.65;
+}
+
+.pros-card li::before,
+.cons-card li::before {
+  position: absolute;
+  left: 0;
+  font-weight: 800;
+}
+
+.pros-card li::before {
+  content: "✓";
+  color: var(--success);
+}
+
+.cons-card li::before {
+  content: "–";
+  color: var(--warning);
+}
+
+/* PARA QUEM É */
+
+.fit-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.fit-card {
+  padding: 30px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: rgba(255,255,255,.018);
+}
+
+.fit-icon {
+  display: grid;
+  width: 46px;
+  height: 46px;
+  place-items: center;
+  margin-bottom: 24px;
+  border: 1px solid var(--line-strong);
+  border-radius: 14px;
+  background: rgba(255,255,255,.025);
+}
+
+.fit-card--yes .fit-icon {
+  color: var(--success);
+}
+
+.fit-card--no .fit-icon {
+  color: var(--warning);
+}
+
+.fit-card h3 {
+  margin: 0 0 20px;
+  font-family: "Sora", sans-serif;
+  font-size: 1.35rem;
+}
+
+.fit-card ul {
+  display: grid;
+  gap: 11px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.fit-card li {
+  position: relative;
+  padding-left: 22px;
+  color: var(--text-soft);
+  line-height: 1.6;
+}
+
+.fit-card--yes li::before,
+.fit-card--no li::before {
+  position: absolute;
+  left: 0;
+}
+
+.fit-card--yes li::before {
+  content: "✓";
+  color: var(--success);
+}
+
+.fit-card--no li::before {
+  content: "–";
+  color: var(--warning);
+}
+
+/* OFERTA */
+
+.offer-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 310px;
+  gap: 60px;
+  align-items: center;
+  padding: 46px;
+  border: 1px solid rgba(124,140,255,.28);
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(circle at 86% 18%, rgba(124,140,255,.16), transparent 35%),
+    var(--surface-soft);
+}
+
+.offer-card h2 {
+  max-width: 760px;
+  margin: 10px 0 14px;
+  font-family: "Sora", sans-serif;
+  font-size: clamp(2rem,3.5vw,3.2rem);
+  line-height: 1.12;
+  letter-spacing: -.05em;
+}
+
+.offer-card p {
+  max-width: 720px;
+  margin: 0;
+  color: var(--text-soft);
+}
+
+.offer-card__action {
+  display: grid;
+  gap: 10px;
+  align-content: center;
+}
+
+.offer-card__action > span,
+.offer-card__action small {
+  color: var(--muted);
+  font-size: .72rem;
+}
+
+.offer-card__action > strong {
+  margin-bottom: 8px;
+  font-family: "Sora", sans-serif;
+  font-size: 2.6rem;
+  line-height: 1;
+}
+
+/* DIVISÕES EDITORIAIS */
+
+.faq-section,
+.related-section {
+  border-top: 1px solid var(--line);
+}
+
+/* TABLET */
+
+@media (max-width: 1050px) {
+  .offer-card {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .offer-card__action {
+    max-width: 520px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 760px) {
+  .product-specs-mini,
+  .pros-cons-detail,
+  .fit-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .offer-card {
+    padding: 30px 24px;
+  }
+
+  .offer-card__action .btn {
+    width: 100%;
+  }
+}
