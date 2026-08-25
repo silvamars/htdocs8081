@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Descubra, compare e escolha produtos digitais com análises objetivas e recomendações selecionadas pela HubOnSale.">
+  <meta name="description" content="Descubra, compare e escolha melhor com guias, rankings, cursos e análises independentes da HubOnSale.">
   <meta name="theme-color" content="#0b0f19">
-
-  <title>HubOnSale | Recomendações e reviews de produtos digitais</title>
+  
+  <title>HubOnSale | Guias, comparativos, cursos e recomendações</title>
+  <link rel="canonical" href="https://hubonsale.com/">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,6 +20,16 @@
 
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/home-v1.css">
+
+  <style>
+    @media (max-width: 768px) {
+      .hero-text {
+        max-width: 32ch;
+        font-size: .95rem;
+        line-height: 1.65;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -38,14 +49,15 @@
     </a>
 
     <nav class="main-nav" aria-label="Navegação principal">
-      <a href="#produtos">Produtos</a>
-      <a href="#rankings">Rankings</a>
+      <a href="#rankings">Guias</a>
+      <a href="#produtos">Editor’s Picks</a>
+      <a href="#cursos">Cursos</a>
       <a href="#reviews">Reviews</a>
       <a href="#metodologia">Como avaliamos</a>
     </nav>
 
     <div class="nav-actions">
-      <a class="btn btn-primary btn-small" href="#produtos">
+      <a class="btn btn-primary btn-small" href="#rankings">
         Ver recomendações
       </a>
 
@@ -92,13 +104,14 @@
     </div>
 
     <nav class="mobile-menu__nav" aria-label="Navegação móvel">
-      <a href="#produtos">Produtos</a>
-      <a href="#rankings">Rankings</a>
+      <a href="#rankings">Guias</a>
+      <a href="#produtos">Editor’s Picks</a>
+      <a href="#cursos">Cursos</a>
       <a href="#reviews">Reviews</a>
       <a href="#metodologia">Como avaliamos</a>
     </nav>
 
-    <a class="btn btn-primary mobile-menu__cta" href="#produtos">
+    <a class="btn btn-primary mobile-menu__cta" href="#rankings">
       Ver recomendações
     </a>
 
@@ -109,35 +122,35 @@
     <section class="hero section">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <span class="eyebrow">Curadoria para decisões digitais melhores</span>
+          <span class="eyebrow">Curadoria para escolhas melhores</span>
 
           <h1>
-            Descubra produtos digitais
-            <span>com mais confiança.</span>
+            Descubra. Compare.
+            <span>Escolha melhor.</span>
           </h1>
 
           <p class="hero-text">
-            Análises objetivas, comparativos claros e recomendações selecionadas
-            para cursos, ferramentas, softwares e soluções digitais.
+            Guias, comparativos e recomendações para encontrar
+            produtos, cursos e serviços que realmente valem a pena.
           </p>
 
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#produtos">Explorar produtos</a>
-            <a class="btn btn-secondary" href="#metodologia">Conhecer o método</a>
+            <a class="btn btn-primary" href="#rankings">Explorar recomendações</a>
+            <a class="btn btn-secondary" href="#metodologia">Como avaliamos</a>
           </div>
 
           <div class="hero-proof" aria-label="Indicadores de confiança">
             <div>
-              <strong>4,9/5</strong>
-              <span>Avaliação média</span>
+              <strong>Curadoria</strong>
+              <span>Seleções mais objetivas</span>
             </div>
             <div>
-              <strong>100%</strong>
-              <span>Análises objetivas</span>
+              <strong>Critérios</strong>
+              <span>Comparações transparentes</span>
             </div>
             <div>
-              <strong>Semanal</strong>
-              <span>Conteúdo atualizado</span>
+              <strong>Atualizado</strong>
+              <span>Conteúdo revisado</span>
             </div>
           </div>
         </div>
@@ -153,47 +166,47 @@
             </div>
 
             <div class="score-card__product">
-              <div class="product-avatar">AI</div>
+              <div class="product-avatar">TOP</div>
               <div>
-                <span class="card-kicker">Inteligência Artificial</span>
-                <h2>AI Productivity Pro</h2>
+                <span class="card-kicker">Guia em destaque</span>
+                <h2>Melhores câmeras Wi-Fi</h2>
               </div>
             </div>
 
             <div class="score-card__body">
               <div class="score-ring">
-                <strong>9,8</strong>
-                <span>HubOnSale Score</span>
+                <strong>Top 5</strong>
+                <span>Seleção HubOnSale</span>
               </div>
 
               <div class="score-details">
-                <div class="stars" aria-label="5 de 5 estrelas">★★★★★</div>
-                <p>Excelente para profissionais que querem automatizar tarefas e ganhar produtividade.</p>
+                <div class="stars" aria-label="Seleção editorial">★★★★★</div>
+                <p>Compare recursos, custo-benefício e perfis de uso antes de escolher.</p>
               </div>
             </div>
 
             <div class="score-card__footer">
               <div>
-                <span>A partir de</span>
-                <strong>R$ 97</strong>
+                <span>Categoria</span>
+                <strong>Casa &amp; Segurança</strong>
               </div>
-              <a href="#produtos">Ver análise</a>
+              <a href="melhores-cameras-seguranca">Ver guia</a>
             </div>
           </article>
 
           <div class="mini-card mini-card--top glass-card">
-            <span class="mini-card__icon">UX</span>
+            <span class="mini-card__icon">IA</span>
             <div>
-              <strong>Design Essentials</strong>
-              <span>Nota 9,4</span>
+              <strong>Ferramentas de IA</strong>
+              <span>Guia em preparação</span>
             </div>
           </div>
 
           <div class="mini-card mini-card--bottom glass-card">
-            <span class="mini-card__icon">MK</span>
+            <span class="mini-card__icon">EDU</span>
             <div>
-              <strong>Marketing Lab</strong>
-              <span>Nota 9,2</span>
+              <strong>Cursos gratuitos</strong>
+              <span>Nova seleção</span>
             </div>
           </div>
         </div>
@@ -207,7 +220,7 @@
           <i class="fa-solid fa-magnifying-glass-chart" aria-hidden="true"></i>
           <div>
             <strong>Análises independentes</strong>
-            <span>Reviews de cursos, ferramentas e softwares.</span>
+            <span>Produtos e serviços avaliados com critérios claros.</span>
           </div>
         </article>
 
@@ -223,7 +236,7 @@
           <i class="fa-solid fa-arrows-rotate" aria-hidden="true"></i>
           <div>
             <strong>Conteúdo atualizado</strong>
-            <span>Análises revisadas quando produtos e ofertas mudam.</span>
+            <span>Guias revisados conforme produtos, serviços e ofertas mudam.</span>
           </div>
         </article>
 
@@ -243,10 +256,10 @@
         <div class="section-heading editor-picks-heading">
           <div>
             <span class="eyebrow">Editor’s Picks</span>
-            <h2 id="editor-picks-title">As recomendações que mais se destacam</h2>
+            <h2 id="editor-picks-title">Destaques selecionados pela HubOnSale</h2>
           </div>
           <div class="editor-picks-intro">
-            <p>Uma seleção curta, baseada em proposta, qualidade do conteúdo, reputação, suporte e custo-benefício.</p>
+            <p>Uma seleção curta de guias, serviços e conteúdos que se destacam por utilidade, reputação e custo-benefício.</p>
             <a class="inline-link" href="#metodologia">Como fazemos esta seleção <span aria-hidden="true">→</span></a>
           </div>
         </div>
@@ -262,16 +275,16 @@
               <h3>AI Productivity Pro</h3>
               <p class="editor-pick__summary">Nossa principal recomendação para profissionais que querem aplicar IA no trabalho, organizar processos e automatizar tarefas repetitivas.</p>
               <div class="editor-pick__verdict">
-                <div class="editor-pick__score" aria-label="HubOnSale Score 9,8 de 10"><span>HubOnSale Score</span><strong>9,8</strong><small aria-hidden="true">★★★★★</small></div>
-                <div><span class="editor-pick__label">Por que recomendamos</span><ul class="editor-pick__reasons"><li>Conteúdo prático e aplicável</li><li>Modelos e fluxos prontos</li><li>Boa relação entre conteúdo e preço</li></ul></div>
+                <div class="editor-pick__score" aria-label="Top 5 HubOnSale"><span>Seleção</span><strong>Top 5</strong><small aria-hidden="true">★★★★★</small></div>
+                <div><span class="editor-pick__label">O que você encontra</span><ul class="editor-pick__reasons"><li>Comparação direta entre opções</li><li>Destaques de recursos e limitações</li><li>Indicações por perfil de uso</li></ul></div>
               </div>
-              <div class="editor-pick__footer"><p><strong>Melhor para:</strong> produtividade profissional e automações.</p><a class="btn btn-primary" href="#">Ler análise completa</a></div>
+              <div class="editor-pick__footer"><p><strong>Melhor para:</strong> quem quer escolher uma câmera externa com mais segurança.</p><a class="btn btn-primary" href="melhores-cameras-seguranca">Ver guia completo</a></div>
             </div>
           </article>
 
           <div class="editor-picks-secondary">
             <article class="editor-pick editor-pick--compact">
-              <div class="editor-pick__visual visual-design" aria-hidden="true"><span class="chip chip-muted">Melhor custo-benefício</span><span class="editor-pick__symbol">UX</span></div>
+              <div class="editor-pick__visual visual-design" aria-hidden="true"><span class="chip chip-muted">Software &amp; IA</span><span class="editor-pick__symbol">IA</span></div>
               <div class="editor-pick__content">
                 <div class="editor-pick__meta"><span>Design</span><span>Certificado</span></div>
                 <h3>Design Essentials</h3><p>Fundamentos de interface, identidade visual e processo criativo para projetos digitais.</p>
@@ -279,7 +292,7 @@
               </div>
             </article>
             <article class="editor-pick editor-pick--compact">
-              <div class="editor-pick__visual visual-code" aria-hidden="true"><span class="chip chip-muted">Melhor para iniciantes</span><span class="editor-pick__symbol">&lt;/&gt;</span></div>
+              <div class="editor-pick__visual visual-code" aria-hidden="true"><span class="chip chip-muted">Cursos &amp; Carreira</span><span class="editor-pick__symbol"><i class="fa-solid fa-graduation-cap"></i></span></div>
               <div class="editor-pick__content">
                 <div class="editor-pick__meta"><span>Programação</span><span>Do zero ao projeto</span></div>
                 <h3>Dev Start Web</h3><p>Formação introdutória em HTML, CSS e JavaScript com projetos orientados.</p>
@@ -394,10 +407,10 @@
             </div>
           </a>
 
-          <a class="interest-card" href="#" aria-label="Ver ranking dos melhores cursos de marketing digital">
+          <a class="interest-card" href="#" aria-label="Ver ranking dos melhores dispositivos para casa inteligente">
             <div class="interest-card__visual">
               <img
-                src="https://picsum.photos/id/0/400/250"
+                src="https://picsum.photos/id/96/400/250"
                 alt=""
                 width="600"
                 height="360"
@@ -406,13 +419,13 @@
 
             <div class="interest-card__content">
               <span class="interest-card__icon" aria-hidden="true">
-                <i class="fa-solid fa-bullhorn"></i>
+                <i class="fa-solid fa-house-signal"></i>
               </span>
 
-              <h3>Melhores cursos de Marketing</h3>
+              <h3>Melhores dispositivos para casa inteligente</h3>
 
               <p>
-                Compare formações para tráfego, conteúdo, vendas e crescimento de negócios digitais.
+                Compare dispositivos conectados para automação, praticidade, segurança e economia no dia a dia.
               </p>
 
               <span class="interest-card__link">
@@ -441,6 +454,57 @@
       </div>
     </section>
 
+    <section class="section courses-section" id="cursos" aria-labelledby="courses-title">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">Cursos &amp; Capacitação</span>
+            <h2 id="courses-title">Aprenda novas habilidades sem gastar nada</h2>
+          </div>
+          <p>Seleções de cursos gratuitos de instituições reconhecidas para desenvolver habilidades, fortalecer o currículo e explorar novas áreas.</p>
+        </div>
+
+        <article class="editor-pick editor-pick--primary courses-feature">
+          <div class="editor-pick__visual visual-code" aria-hidden="true">
+            <span class="chip chip-accent">Seleção gratuita</span>
+            <span class="editor-pick__symbol"><i class="fa-solid fa-graduation-cap"></i></span>
+          </div>
+
+          <div class="editor-pick__content">
+            <div class="editor-pick__meta">
+              <span>Cursos online</span>
+              <span>5 opções para começar</span>
+            </div>
+
+            <h3>5 cursos gratuitos para começar hoje</h3>
+            <p class="editor-pick__summary">Uma seleção inicial para quem quer aprender no próprio ritmo, conhecer novas áreas e aproveitar conteúdos gratuitos oferecidos por instituições reconhecidas.</p>
+
+            <div class="editor-pick__verdict">
+              <div class="editor-pick__score" aria-label="5 cursos selecionados">
+                <span>Seleção</span>
+                <strong>5</strong>
+                <small>cursos gratuitos</small>
+              </div>
+
+              <div>
+                <span class="editor-pick__label">Instituições que queremos destacar</span>
+                <ul class="editor-pick__reasons">
+                  <li>FGV</li>
+                  <li>Fundação Bradesco</li>
+                  <li>Sebrae e outras instituições</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="editor-pick__footer">
+              <p><strong>Ideal para:</strong> carreira, atualização profissional e descoberta de novas habilidades.</p>
+              <a class="btn btn-primary" href="cursos-gratuitos">Ver cursos gratuitos</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
     <section class="section" id="metodologia">
   <div class="container method-grid">
 
@@ -450,10 +514,9 @@
       <h2>Toda recomendação segue os mesmos critérios.</h2>
 
       <p>
-        Antes de recomendar qualquer produto, analisamos qualidade,
+        Antes de recomendar uma opção, analisamos qualidade,
         reputação, experiência de uso e custo-benefício. Assim, você
-        entende por que um produto foi recomendado e qual é a melhor
-        opção para o seu perfil.
+        entende por que ela foi destacada e para qual perfil faz mais sentido.
       </p>
     </div>
 
@@ -462,10 +525,10 @@
       <article>
         <span>01</span>
         <div>
-          <h3>Qualidade do produto</h3>
+          <h3>Qualidade e utilidade</h3>
           <p>
-            Avaliamos o conteúdo, os recursos oferecidos e para quem
-            a solução realmente é indicada.
+            Avaliamos recursos, proposta, conteúdo e para quem
+             cada opção realmente é indicada.
           </p>
         </div>
       </article>
@@ -475,7 +538,7 @@
         <div>
           <h3>Reputação</h3>
           <p>
-            Consideramos a credibilidade do fabricante, avaliações,
+            Consideramos a credibilidade da empresa ou instituição, avaliações,
             atualizações e a experiência da comunidade.
           </p>
         </div>
@@ -486,8 +549,8 @@
         <div>
           <h3>Experiência de uso</h3>
           <p>
-            Observamos facilidade de uso, suporte, organização do
-            conteúdo e processo de compra.
+            Observamos facilidade de uso, clareza das informações,
+             suporte e facilidade de acesso ou contratação.
           </p>
         </div>
       </article>
@@ -696,7 +759,7 @@
             alt="HubOnSale">
         </a>
         <p>
-          Plataforma de descoberta e comparação de produtos.
+          Guias, comparativos e recomendações para ajudar você a escolher melhor.
         </p>
       </div>
 
@@ -717,7 +780,7 @@
       <div>
         <strong>Legal</strong>
         <a href="/politica-de-privacidade">Política de privacidade</a>
-        <a href="/termos-de-uso.html">Termos de uso</a>
+        <a href="/termos-de-uso">Termos de uso</a>
         <a href="/transparencia-afiliados">Transparência de afiliados</a>
       </div>
     </div>
